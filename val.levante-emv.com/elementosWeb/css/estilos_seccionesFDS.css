@@ -1,0 +1,252 @@
+/*genéricos*/
+strong {
+	font-weight: 100;
+}
+
+.cuerpo_noticia strong {
+	font-weight: bold;
+}
+
+a{ color:#000}
+.noticias a:hover{ color: #666!important; text-decoration:underline!important}
+.clear:after,.secundaria:after,.primaria:after,.bloque1columna:after,.bloque2columnas:after,.bloque-der:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clear,.secundaria,.primaria,.bloque1columna,.bloque2columnas,bloque-der{zoom: 1;display: block;}
+
+.noticiasizq{float: left; margin-right: 7px; width: 318px;}
+.noticiasder{width:318px;padding-left:8px; padding-bottom:0; margin-bottom:0; border-left:1px dotted #CFCFCF; float: left;}
+.servicio{clear:both;}
+
+/*cabecera: submenu de la sección*/
+	.submenu6 {left:0;}
+	.submenu6 ul{margin:0; padding:0}
+	.submenu6 li{margin:0; padding:0; display:inline}
+
+/*estilos de columna .noticiasizq y noticiasder en .noticias */
+
+	/*bloques*/
+	.bloque2columnas { margin-bottom:20px;clear:both;}
+	.bloque1columna { margin-bottom:0px; float:left; width:100%; padding-bottom:10px;}
+
+
+	/*titulares*/
+	/*.bloque2columnas h2, .bloque1columna h2{ border-bottom:3px solid #52BA0D; padding-bottom:3px; text-shadow:0 0 1px #fff; margin-bottom:14px}
+	.bloque2columnas h2, .bloque2columnas h2 a, .bloque1columna h2, .bloque1columna h2 a {font-family: HarabaraBold, Arial, Helvetica, sans-serif; font-size:22px;color:#666666; font-weight:100; font-stretch:normal; letter-spacing:0.13em}*/
+	.bloque2columnas h3, .bloque2columnas h3 a, .bloque1columna h3, .bloque1columna h3 a { color:#000}
+	.bloqueSeccion h2, .bloqueSeccion h2 a { color:#000}
+	.bloqueSeccion h3, .bloqueSeccion h3 a { color:#000}
+	.bloqueSeccion h4, .bloqueSeccion h4 a { color:#000}
+	.bloqueSeccion h1, .bloqueSeccion h1 a, .noticia_titular h1 { color:#000}
+	
+	.bloque2columnas h4, .bloque2columnas h4 a, .bloque1columna h4, .bloque1columna h4 a { color:#000; font-size:14px; margin-top:0}
+	/*titulares*/
+	.bloque2columnas h2, .bloque1columna h2{border-top:none !important;border-bottom:2px solid #89a288; padding-bottom:0px; margin-bottom:3px}
+	.bloque2columnas h2, .bloque2columnas h2 a, .bloque1columna h2, .bloque1columna h2 a {
+	font-family: "Times New Roman", Times, serif;
+	font-size:21px;
+	color:#000;
+	font-weight:normal;
+}
+.bloque2columnas h2 a:hover, .bloque1columna h2 a:hover, .bloque1columna h2 a:hover {
+	text-decoration:none!important;
+}
+	.bloque2columnas h2, .bloque2columnas h2 a, .bloque1columna h2, .bloque1columna h2 a {font-family: "Times New Roman", Times, serif; font-size:21px;color:#000; font-weight:normal;}
+
+	/*noticia recomendamos*/
+	.destacado-completo{ margin-top:0px}
+
+	/*comentarios*/
+	.noticiadd2 a { font-family: Arial,Helvetica,sans-serif; font-size: 11px; line-height: 13px; text-decoration: none;color:#000}
+
+	/*apoyos*/
+	.apoyos { padding:0; list-style:none}
+	.apoyosleft li{ float:left;}
+	.apoyosleft a{ float:left; margin-left:20px;}
+	.apoyosleft .apoyo1 {margin-left:0;}
+	.apoyosleft a span{ padding-bottom:1px}
+	.editor_galeriaFotos {background-image: url(http://www.levante-emv.com/elementosWeb/mediaweb/images/iconos/fotos_black.gif);color:#000!important}
+	.editor_galeriaVideo {background-image: url(http://www.levante-emv.com/elementosWeb/mediaweb/images/iconos/video_black.gif);color:#000!important;}
+	.editor_encuestas {background-image: url(http://www.levante-emv.com/elementosWeb/mediaweb/images/iconos/encuestas_black.gif);color:#000!important}
+
+	/*noticia recomendamos*/
+	.destacado-completo{ margin-top:0px}
+	/*.destacado-completo .destacado-foto{ position:relative; margin-bottom:15px}*/
+	.destacado-completo .destacado-foto{position:relative; margin-bottom:15px; background:#1C1D31;}
+	.bloque1columna .destacado-completo .destacado-foto .foto-principal{ float:left; width: 414px; height: 238px;text-align:center;font-size:0px;line-height:238px;}
+	.bloque1columna .destacado-completo .destacado-foto .foto-principal img{max-width: 414px; max-height: 239px; vertical-align:middle;}
+	.bloque1columna .destacado-completo .destacado-foto .contenido-foto{float:left ;color:#fff; width:240px}
+	
+
+	.bloque2columnas.destacado-completo .destacado-foto .contenido-foto{ position: absolute; bottom:0; left:0; width:654px;  color:#fff; font-size:14px;
+								background:url(http://www.levante-emv.com/elementosWeb/mediaweb/images/dest.png);
+								}
+								
+	.destacado-foto	.destacado-marg{padding:5px 10px;}
+	.destacado-completo .destacado-foto h3,.destacado-completo .destacado-foto h3 a{color:#FFF; font-size:25px; margin-bottom: 8px; margin-top: 3px;}
+	.destacado-completo .destacado-foto p{ margin:0 0 10px 0;}
+
+	/*planteamiento 2 de destacado*/
+	.destacado-completo2{ margin-top:10px}
+	.destacado-completo2 .destacado-foto{ position:relative; margin-bottom:15px}
+
+	.destacado-completo2 .destacado-foto .contenido-foto{font-size:13px;}
+	.destacado-completo2 .destacado-foto h3,.destacado-completo2 .destacado-foto h3 a{font-size:24px; margin-bottom: 8px; margin-top: 3px;}
+	.destacado-completo2 .destacado-foto p{ margin:0 0 10px 0;}
+
+
+
+	/*bloque 3 noticias del destacado*/
+	.noticiasizq-3c{ width:208px; margin-right:15px; float:left; background:#EDEDED; overflow:hidden;}
+	.noticiasder-3c{ width:208px; float:left;background:#EDEDED; overflow:hidden;}
+
+		.destacado-3cols h3{margin:7px 10px; font-size:15px; /*height:39px;*/}
+		.destacado-3cols h3 div{/*height: 100%;*/ overflow:hidden;}
+		.destacado-3cols h3 a{font-size:15px}
+
+
+	/*noticias grandes*/
+	.primaria{ margin-bottom:8px; padding-bottom:8px;border-bottom: 1px dotted #CCC;}
+	.primaria .cuadro_imagenes img{/*min-*/max-height: 184px; max-width: 318px;/* min-width: 318px;*/vertical-align: middle;}
+	.cuadro_imagenes{ margin-bottom:10px; overflow:hidden;}
+	.primaria .cuadro_imagenes{width: 318px; height: 184px; background-color:#EAEAEA; line-height: 182px; text-align:center;font-size:0px}
+
+	/*noticias pequeñas*/
+	.secundaria{ margin-bottom:8px; padding-bottom:8px;border-bottom: 1px dotted #CCC;}
+	.secundaria .imagensec{ float:left; width:110px; height: 63px; overflow: hidden; background-color: #EAEAEA;font-size:0px;line-height:63px;text-align:center;}
+	.secundaria .imagensec img{ /*min-width:110px; min-*/max-height: 64px;max-width:110px;vertical-align:middle;}
+	.secciones.secundaria .imagensec img{ /*min-width:110px; min-*/max-height: 122px; max-width:210px; vertical-align: middle;}
+	.secundaria .textosec{ float:right; width:190px; /*max-height:88px;*/ overflow:hidden;}
+	.secundaria .textosec p{ margin:0;font-size: 11px;}
+	.secundaria .textosec_sinimagen p{ margin:0}
+
+	/*mas noticias*/
+	.masnoticias{ background:url(../mediaweb/images/iconos/ico_ir.gif) no-repeat 0 center; padding:3px 0 3px 20px; float:left; text-decoration:none; font-weight:bold; margin-bottom:0px}
+
+	.masnoticias-lateral{
+		width:318px;
+		border-bottom-color: #bebebe;
+	   	border-bottom-style: solid;
+	   	border-bottom-width: 5px;
+	}
+	.masnoticias-lateral h3{
+		border-bottom-color: #89a288;
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		color: #3a3a3a;
+		display: block;
+		font-family: "Times New Roman",Times,serif;
+		font-size: 21px;
+		padding-bottom: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 2px;
+		margin: 0px;
+		width: 308px;
+		text-align: right;
+		font-weight: normal;
+	}
+
+	.masnoticias-lateral ol{
+	    color: #363636;
+	    font-family: Tahoma,Geneva,sans-serif;
+	    font-size: 11px;
+	    list-style-position: inside;
+	    margin-bottom: 0;
+	    margin-right: 0;
+	    margin-top: 0;
+	    padding-bottom: 5px;
+	    padding-left: 0;
+	    padding-right: 0;
+	    padding-top: 5px;
+	    width: 318px;
+	}
+	.masnoticias-lateral li{
+		line-height: 25px;
+		border-bottom-color: #bebebe;
+	    border-bottom-style: solid;
+	    border-bottom-width: 1px;
+		padding-left:5px;
+	}
+	.masnoticias-lateral li a{
+		text-decoration:none;
+	    color: #363636;
+	}
+	.masnoticias-lateral li a:hover{
+		text-decoration: underline;
+	}
+	/*secciones de vida y estilo*/
+	.secciones .imagensec{float: left; width: 210px; height: 120px; background-color: #EAEAEA; text-align:center; line-height: 120px;}
+	.secciones .textosec{float: none; width: auto; max-height: none; padding-left: 20px;}
+	.secciones .textosec_sinimagen{float: none; width: auto}
+	/*.secciones .apoyos-l{ float:left; width:70px; padding-right:15px; border-right:1px dotted #ccc; margin-top:5px}*/
+	.secciones .apoyos-l span{display:block}
+	/*.secciones .textsec2{ float:right; width:326px}*/
+	.apoyos{ clear: none; margin-top:0px;}
+
+	.apoyos-l{ float:right; padding-right:0; padding-left:15px; border-right:0; border-left:1px dotted #ccc; margin-left:10px; margin-right:0px;}
+	.textsec2{ float:left;/* width:326px*/}
+
+	.epigrafe {margin-top:0}
+	span.fecha {color: #CA7D0B;font-weight: bold;}
+
+	/*mas noticias*/
+	.mas-noticias ul{padding:0; list-style:none; margin:0}
+	.mas-not-list h3, .mas-noticias h3 a{font-size:14px;}
+	.mas-not-list h3 a{font-size:14px; background:url(../mediaweb/images/iconos/ico_ir.gif) no-repeat ; display:block; min-height:19px; padding:3px 0 5px 24px; border-bottom:1px dotted #ccc}
+	.mas-not-num  li{ float:left;}
+	.mas-not-num  a{ float:left; background:#EFEFEF; border:1px solid #C9C9C9; padding:5px 10px; margin-right:4px; text-decoration:none}
+
+	/*magazine*/
+	.magazine {}
+	.mag-cuerpo{padding:10px 0 10px 7px;background:#EDEDED; overflow:hidden}
+	.magazine ul{padding:10px; list-style:none; background:#C7C7C7; float:left; margin:0}
+	.magazine li{ float:left; margin-right:10px}
+	.magazine li.fin-right{ margin-right:0; padding-right:0}
+	.magazine .anterior,.magazine .siguiente{ text-indent:-9999px; width:19px; height:19px; float:left; background-image:url(http://www.levante-emv.com/elementosWeb/mediaweb/images/iconos/mag-ant-sig.png); background-repeat:no-repeat; margin-top:85px}
+		.magazine .anterior{ margin-right:10px}
+		.magazine .siguiente{ background-position:-19px 0; margin-left:10px}
+	.magazine .anterior:hover,.magazine .siguiente:hover{opacity: 0.7; -moz-opacity: 0.7; -webkit-opacity: 0.7; filter:alpha(opacity=70);}
+
+	.magazine h3{ margin: 5px 0 0 0}
+	.magazine h3,.magazine h3 a{ text-align: center; font-size:15px}
+
+
+	/*columna derecha*/
+	/*---------------*/
+	.bloque-der,.publicidad{margin-bottom:35px; overflow:hidden}
+	.oscuro{background:#EBE8E1; padding:10px 15px; }
+	.oscuro .textosec{ width:175px; height:70px; overflow:hidden}
+	.bloque-int .secundaria{ margin-bottom:10px; padding-bottom:10px;}
+	.sin-lineas .secundaria{ border-bottom: none;}
+	.bloque-der .masnoticias{margin-bottom:0}
+
+
+
+
+	.fin-bot{ margin-bottom:0; padding-bottom:0}
+	
+	.img-dest-3cols
+	{
+		text-align:center;
+	}
+	
+	.destacado-3cols img{
+		max-width: 207px;
+		max-height: 120px;
+		height: 120px;
+	}
+	
+	/*.destacado-foto > img{
+		width:654px;
+	}*/
+	
+	.destacado-foto{
+		width:654px;
+		background-color:#EAEAEA;
+		clear: both;
+		overflow: hidden;
+	}
+	
+	.destacado-completo .destacado-foto .noticiadd2 a{
+		color:#FFFFFF;
+	}
+

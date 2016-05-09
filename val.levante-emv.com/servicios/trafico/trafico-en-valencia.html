@@ -1,0 +1,1695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"><html>
+	<head><base href="http://www.riuraueditors.cat/levante/val.levante-emv.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Trànsit a València- Levante-EMV</title>
+		<meta name="description" content="Tráfico en Valencia, consulta el estado del tráfico en la Comunidad Valenciana y España. Tráfico en Castellón">
+		<meta name="keywords" content="tráfico,trafico,tráfico Las Palmas,trafico Las Palmas de Gran Canaria,trafico Canarias,trafico islas,trafico Lanzarote,trafico Fuerteventura,estado del trafico,Las Palmas,Canarias,Fuerteventura,Lanzarote.">
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script language="JavaScript">
+		<!--
+		//Titulo de la cabecera
+			var tituloCabecera = "Tráfico en Valencia";
+		-->
+		</script>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+<meta name="author" content="Levante-EMV">
+<meta name="organization" content="Levante-EMV">
+<meta name="copyright" content="Editorial Prensa Valenciana S.A.">
+<meta name="locality" content="Valencia, España, U.E.">
+<meta name="lang" content="es">
+<meta http-equiv="Content-Language" content="es">
+<meta name="robots" content="index,follow">
+<meta http-equiv="refresh" content="900">
+
+<link type="text/css" href="../../elementosWeb/css/servicios.css" rel="stylesheet">
+<script languaje="JavaScript" src="../../elementosWeb/js/servicios.js"></script>
+
+
+<script language="JavaScript">
+<!--
+function fAbrirVentana(theURL,winName,features)
+{
+   features=features+",scrollbars=yes";
+	window.open(theURL,winName,features);
+}
+
+  function anyadirParam(url, prmName, valor)
+  {
+ var prmPosic = url.indexOf(prmName);
+ var sepAlm   = url.indexOf("#");
+
+ var sepPos;
+ var ret = "";
+
+ var urlAntesAlm =  url;
+ if(sepAlm!=-1)
+ 	urlAntesAlm = url.substring(0, sepAlm);
+
+ if (prmPosic != -1)
+ {
+ 	var sepPos = urlAntesAlm.indexOf("&", prmPosic);
+
+ret = urlAntesAlm.substring(0, prmPosic + prmName.length + 1);
+  	ret += valor;
+
+	if(sepPos!=-1)
+  		ret += urlAntesAlm.substring(sepPos, urlAntesAlm.length);
+ }
+ else {
+
+
+ 	ret = urlAntesAlm;
+	var sepInterr = urlAntesAlm.indexOf("?");
+
+	if(sepInterr==-1)
+		ret += "?";
+	else ret += "&";
+
+	ret += prmName+"="+valor;
+ }
+
+ if(sepAlm!=-1)
+ret += url.substring(sepAlm, url.length);
+
+return ret;
+  }
+
+function compruebaTexto()
+{
+   var texto = formComent.pTexto.value;
+
+ 			if (texto.length == 0)
+ 			{
+		alert ("Debe escribir algo en la casilla de texto");
+		formComent.pTexto.focus();
+		return false;
+ 			}
+  				return true;
+}
+
+function compruebaNombre()
+{
+   var nombre = formComent.pNombreUsuario.value;
+
+ 			if (nombre.length == 0)
+ 			{
+		alert ("Debe indicar un nombre obligatoriamente");
+		formComent.pNombreUsuario.focus();
+		return false;
+ 			}
+  				return true;
+}
+
+function compruebaTamTexto(objTexto, tamMax)
+{
+	var texto="";
+	var error="";
+
+	if(objTexto!=null)
+	{
+		texto=objTexto.value;
+
+		if(texto.length>tamMax)
+		{
+			error="El tam. máximo permitido es de "+tamMax+" caracteres.";
+		}
+	}
+
+	if(error!="")
+	{
+		alert(error);
+		return false;
+	}
+
+	return true;
+}
+
+function comprobarAvisoLegal(){
+	if(document.formComent.acepto_aviso_legal.checked)
+		return true;
+	else
+	{
+		alert("Debe aceptar las condiciones del aviso legal");
+		return false;
+	}
+}
+
+function enviarComentario()
+{
+	if(compruebaTexto() && compruebaTamTexto(document.formComent.pTexto, 2000))
+	{
+		if(compruebaNombre() && comprobarAvisoLegal())
+		{
+				formComent.action = "/servicios/participacion/almacenar_comentario.jsp";
+
+				fAbrirVentana('','ventana_coment','scrollbars=no,resizable=yes,width=600,height=100');
+				formComent.submit();
+
+				//Borramos todos los campos del comentario añadido
+				formComent.pTexto.value = "";
+				formComent.pNombreUsuario.value = "";
+				formComent.acepto_aviso_legal.checked=false;
+			}
+		}
+}
+function envioNoticia(formulario)
+{
+	var nombreForm = 'formEnvioNoticia' + formulario;
+
+	fAbrirVentana('','ventana_envioNoticia','scrollbars=no,resizable=yes,width=670,height=550');
+	document.forms[nombreForm].submit();
+
+}
+
+function actualizarComentarios(pFecha, pNoticia, pPagina)
+{
+	var envioComent = anyadirParam(document.location.href, "pCom", pPagina);
+	var indiceComent = envioComent.indexOf("#EnlaceComentarios");
+	if(indiceComent==-1)	envioComent+= "#EnlaceComentarios";
+
+	document.formComentarios.action = envioComent;
+	document.formComentarios.submit();
+
+}
+
+/*
+//Controlador de palabras largas
+//verifica que la cadena no sea una dirección de e-mail
+// verifica que no sea una url
+//en caso de usarse para unos foros verifica...
+//que la cadena no sea código para insertar una imagen
+*/
+var palabrota = 30
+function cPalabrasLargas(texto2,donde){
+
+	var pLink = /^\[url[=]?[\w\*":.\/]*\][\w\*":.\/\[\]]+\[\/url\]$/
+	var pImagen = /^\[img?(=left)?(=right)?\][\w:".\/]*\[\/img(=left)?(=right)?\]$/
+	var pUrl = /^https?:\/\/[\w\.]+/
+	var pCodigo = /^<[\w\."\'$\(\)\= #\?&%@\[\]\;]+>$/
+	var pCodigo2 = /="[\w\.:\/\-"\+\=\?\&\#%@$'\(\)\[\]\;]+"/
+	var pMail = /^[\w\_\.çñ]{2,255}@[\w]{2,255}\.[a-z]{1,3}\.?[a-z]{0,3}$/
+	var palabras = texto2.split(/\s/)
+	var largo = palabras.length
+	var texto3=""
+
+	for(m=0;m<largo;m++){
+		if(palabras[m].length > palabrota){
+			if (pLink.test(palabras[m])){continue}
+			if (pImagen.test(palabras[m])){continue}
+			if (pUrl.test(palabras[m])){continue}
+			if (pCodigo.test(palabras[m])){continue}
+			if (pCodigo2.test(palabras[m])){continue}
+			if (pMail.test(palabras[m])){continue}
+
+			texto3=palabras[m].substr(0,palabrota)+" "
+			for(h=palabrota;h<palabras[m].length;h+=palabrota){
+				texto3+=palabras[m].substr(h,palabrota)
+			}
+			texto2=texto2.replace(palabras[m],texto3)
+			donde.value=texto2
+			cPalabrasLargas(texto2,donde)
+
+		}
+	}
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return unescape( c.substring(nameEQ.length,c.length) );
+	}
+	return null;
+}
+		//-->
+</script>
+
+<script type="text/javascript">
+//Idioma de la hora: es --> español, ca --> catalan, de --> aleman
+var idioma = "es";
+
+
+
+var fecha=new Date();
+var diames=fecha.getDate();
+var diasemana=fecha.getDay();
+var mes=fecha.getMonth() +1 ;
+var ano=fecha.getFullYear();
+var textosemana = new Array (7);
+var textomes = new Array (12);
+
+if(idioma == "ca")
+{
+  textosemana[0]="Diumenge";
+  textosemana[1]="Dilluns";
+  textosemana[2]="Dimarts";
+  textosemana[3]="Dimecres";
+  textosemana[4]="Dijous";
+  textosemana[5]="Divendres";
+  textosemana[6]="Dissabte";
+
+
+  textomes[1]="de gener";
+  textomes[2]="de febrer";
+  textomes[3]="de març";
+  textomes[4]="d'abril";
+  textomes[5]="de maig";
+  textomes[6]="de juny";
+  textomes[7]="de juliol";
+  textomes[8]="d'agost";
+  textomes[9]="de setembre";
+  textomes[10]="d'octubre";
+  textomes[11]="de novembre";
+  textomes[12]="de desembre";
+}
+else if(idioma == "de")
+{
+  textosemana[0]="Sonntag";
+  textosemana[1]="Montag";
+  textosemana[2]="Dienstag";
+  textosemana[3]="Mittwoch";
+  textosemana[4]="Donnerstag";
+  textosemana[5]="Freitag";
+  textosemana[6]="Samstag";
+
+
+  textomes[1]="januar";
+  textomes[2]="februar";
+  textomes[3]="märz";
+  textomes[4]="april";
+  textomes[5]="mai";
+  textomes[6]="juni";
+  textomes[7]="juli";
+  textomes[8]="august";
+  textomes[9]="september";
+  textomes[10]="oktober";
+  textomes[11]="november";
+  textomes[12]="dezember";
+}
+else
+{
+  textosemana[0]="Domingo";
+  textosemana[1]="Lunes";
+  textosemana[2]="Martes";
+  textosemana[3]="Miércoles";
+  textosemana[4]="Jueves";
+  textosemana[5]="Viernes";
+  textosemana[6]="Sábado";
+
+  textomes[1]="de enero";
+  textomes[2]="de febrero";
+  textomes[3]="de marzo";
+  textomes[4]="de abril";
+  textomes[5]="de mayo";
+  textomes[6]="de junio";
+  textomes[7]="de julio";
+  textomes[8]="de agosto";
+  textomes[9]="de septiembre";
+  textomes[10]="de octubre";
+  textomes[11]="de noviembre";
+  textomes[12]="de diciembre";
+ }
+  </script>
+
+		<!-- OAS SETUP begin -->
+<script type="text/javascript">
+	<!--
+	//configuration
+	OAS_url ='http://ads.grupozeta.es/RealMedia/ads/';
+ OAS_listpos = 'Position1,Top1,TopRight';
+ if (screen.width >= 1280)
+ {
+   if(OAS_listpos!='')
+     OAS_listpos += ',';
+   OAS_listpos += 'Top,Top3';
+ }
+ OAS_query = '?';
+ OAS_sitepage = 'www.levante-emv.com/canales/trafico';
+ //end of configuration
+ OAS_version = 10;
+ OAS_rn = '001234567890'; OAS_rns = '1234567890';
+ OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+ function OAS_NORMAL(pos) {
+   document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" TARGET=_top>');
+   document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + OAS_query + '" BORDER=0 ALT="Click!"></A>');
+ }
+ -->
+</script>
+<script type="text/javascript">
+ <!--
+ OAS_version = 11;
+ if (navigator.userAgent.indexOf('Mozilla/3') != -1)
+   OAS_version = 10;
+ if (OAS_version >= 11)
+   document.write('<SC'+'RIPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + OAS_query + '"><\/SCRIPT>');
+ -->
+</script>
+<script type="text/javascript">
+ <!--
+ document.write('');
+ function OAS_AD(pos) {
+   if (OAS_version >= 11 && typeof(OAS_RICH)!='undefined')
+     OAS_RICH(pos);
+   else
+     OAS_NORMAL(pos);
+ }
+ //-->
+</script>
+<!-- OAS SETUP end -->
+
+		<script languaje="JavaScript" src="../../elementosWeb/js/servicios.js"></script>
+
+		<link href="../../elementosExt/mapas/css/modeloradio.css" rel="stylesheet" type="text/css">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvFqgiBtC20NwHdQOHHXvqL712AS95Jvw&amp;sensor=true" type="text/javascript">
+</script>
+<script type="text/javascript">
+
+	var geocoder = new google.maps.Geocoder();
+	var ciudades=new Array();
+	var latitud=new Array();
+	var longitud=new Array();
+	var zoom=new Array();
+	var ambito=new Array();
+	var busqueda=new Array();
+	var keyProg=new Array();
+	var keyPre="";
+	var keyProd="";
+	var latitudEPI="";
+	var longitudEPI="";
+	var mostrarObras=false;
+	var mostrarConos=true;
+	var mostrarRetenciones=true;
+	var mostrarMeteorologia=true;
+	var mostrarPuerto=true;
+	var provinciaGlobal="";
+
+	//informacion datos.xml
+	var ciudadDato=new Array();
+	var climaDato=new Array();
+	var temperaturadDato=new Array();
+	var semaforoDato=new Array();
+	var descripcionIncidencia=new Array();
+	var localizacionIncidencia=new Array();
+	var ciudadIncidencia=new Array();
+	var tipoIncidencia=new Array();
+	var nivelIncidencia=new Array();
+	var latitudLongitud=new Array();
+	var mostrarTiempo="si";
+	var hora="";
+
+	var map = new Array();
+	var provIni = "VALENCIA";
+	var arrayTooltips = new Array();
+	var divAyuda = document.createElement("div");
+
+	function Semaforo(){}
+	Semaforo.prototype.semaforo = document.createElement("img");
+	Semaforo.prototype.initialize = function(map) {
+		this.setButtonStyle_(semaforoDiv);
+		return container;
+	}
+	Semaforo.prototype.setColor = function(color, mapa, div) {
+      div.setAttribute("src", "img/semaforo_" + color + ".png");
+      if(color == "rojo")
+      {
+      	this.semaforo.setAttribute("alt", "Tráfico difícil");
+			this.semaforo.setAttribute("title", "Tráfico difícil");
+      }
+      else if(color == "ambar")
+      {
+      	this.semaforo.setAttribute("alt", "Tráfico irregular");
+			this.semaforo.setAttribute("title", "Tráfico irregular");
+      }
+      else
+      {
+      	this.semaforo.setAttribute("alt", "Tráfico fluido");
+			this.semaforo.setAttribute("title", "Tráfico fluido");
+      }
+	}
+	Semaforo.prototype.getDefaultPosition = function() {
+		return new google.maps.ControlPosition.TOP_RIGHT;
+	}
+	Semaforo.prototype.setButtonStyle_ = function(button) {
+		button.style.width = "19px";
+		button.style.height = "53px";
+		button.style.cursor = "default";
+	}
+
+	function mostrarAyuda(marker, texto, mapa) {
+		divAyuda.innerHTML = "<div class='ayuda'>"+texto+"</div>";
+
+		var overlay = new google.maps.OverlayView();
+		overlay.onAdd = function(){};
+		overlay.onRemove = function(){};
+		overlay.draw = function(){};
+		overlay.setMap(mapa);
+
+		google.maps.event.addListener(mapa, 'idle', function(){
+			var point = overlay.getProjection().fromLatLngToDivPixel(mapa.getBounds().getSouthWest());
+			var offset = overlay.getProjection().fromLatLngToDivPixel(marker.getPosition());
+		});
+
+		var anchor=marker.getIcon().anchor;
+		var width=marker.getIcon().size.width;
+
+		divAyuda.style.visibility="visible";
+		arrayTooltips[arrayTooltips.length] = divAyuda;
+	}
+
+	function ocultarAyuda(marker, texto, mapa) {
+		for(var i = 0; i< arrayTooltips.length; i++)
+		{
+			arrayTooltips[i].style.visibility="hidden";
+		}
+	}
+
+
+
+	function cargarXML()
+	{
+		url="/elementosExt/mapas/xml/configuracion.xml";
+		$.ajax({
+			type: "GET",
+			async:false,
+			ifModified:true,
+			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+			url: url +"?"+ Math.random(),
+			dataType: "xml",
+			success: function(xml) {
+				var i=0;
+				$(xml).find('configuracion').each(function(){
+					keyProg=$(this).attr('keyProg');
+					keyPre=$(this).attr('keyPre');
+					keyProd=$(this).attr('keyProd');
+					$(this).find('ciudad').each(function(){
+						if (i==0)
+							provinciaGlobal=$(this).attr('busqueda');
+
+							ciudades[i]= $(this).text();
+							latitud[i]=$(this).attr('latitud');
+							longitud[i]=$(this).attr('longitud');
+							zoom[i]=$(this).attr('zoom');
+							ambito[i]=$(this).attr('ambito');
+							busqueda[i]=$(this).attr('busqueda');
+
+							i++;
+
+					}); //close each(
+				}); //close each(
+				cargarDatosTiempoMapas();
+			}
+		});
+	}
+
+	function cargarDatosTiempoMapas()
+	{
+		url="/elementosExt/mapas/xml/datos.xml";
+		$.ajax({
+			type: "GET",
+			async:false,
+			ifModified:true,
+			contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+			url: url +"?"+ Math.random(),
+			dataType: "xml",
+			success: function(xml) {
+				var i=0;
+				var j=0;
+				$(xml).find('datos').each(function(){
+					mostrarTiempo=$(this).attr('mostrarTiempo');
+					hora=$(this).attr('hora');
+
+					$(this).find('ciudad').each(function(){
+						ciudadDato[i]= $(this).text();
+						climaDato[i]=$(this).attr('clima');
+						temperaturadDato[i]=$(this).attr('temperatura');
+						if(i<3)
+							semaforoDato[i]=$(this).attr('semaforo');
+						i++;
+					}); //close each(
+
+					$(this).find('incidencia').each(function(){
+						descripcionIncidencia[j]= $(this).text();
+						localizacionIncidencia[j]=$(this).attr('localizacion');
+						tipoIncidencia[j]=$(this).attr('tipoIncidencia');
+						nivelIncidencia[j]=$(this).attr('nivelIncidencia');
+						ciudadIncidencia[j]=$(this).attr('ciudad');
+						latitudLongitud[j]=$(this).attr('latitudLongitud');
+						j++;
+					}); //close each(
+				}); //close each(
+				initialize();
+
+				if (mostrarTiempo=="no")
+				{
+					$("#cajaTiempo").removeClass("mostrar");
+					$("#cajaTiempo").addClass("nomostrar");
+				}
+
+				//pintamos la hora
+				$("#hora").html(hora);
+			}
+		});
+	}
+
+	// array con los marcadores
+	var gMarkers = new Array();
+
+	function marcaPunto(mapa, address, icono, texto, point)
+	{
+		//creamos el marcador
+		marker = new google.maps.Marker({
+			position:point ,
+			map:mapa,
+			visible:true,
+			icon:icono
+			});
+
+			google.maps.event.addListener(marker, "mouseover", function() {
+				divAyuda = document.createElement("div");
+				mapa.getDiv().parentNode.appendChild(divAyuda);
+				mostrarAyuda(marker, texto, mapa);
+			});
+
+			google.maps.event.addListener(marker, "mouseout", function() {
+				ocultarAyuda();
+				divAyuda.parentNode.removeChild(divAyuda);
+			});
+
+			//guardo el marcador en el array
+			gMarkers.push(marker);
+
+	}
+
+	function inicializarMapas()
+	{
+
+		var opciones0 = {
+				center: new google.maps.LatLng(latitud[0], longitud[0]),
+				zoom: parseInt(zoom[0]),
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				mapTypeControl: false,
+				zoomControl: true
+		}
+
+		map[0] = new google.maps.Map(document.getElementById("map_canvas1"), opciones0);
+
+		var opciones1 = {
+				center: new google.maps.LatLng(latitud[1], longitud[1]),
+				zoom: parseInt(zoom[1]),
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				mapTypeControl: false,
+				zoomControl: true
+		}
+		map[1] = new google.maps.Map(document.getElementById("map_canvas2"), opciones1);
+
+		var opciones2 = {
+				center: new google.maps.LatLng(latitud[2], longitud[2]),
+				zoom: parseInt(zoom[2]),
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				mapTypeControl: false,
+				zoomControl: true
+		}
+		map[2] = new google.maps.Map(document.getElementById("map_canvas3"), opciones2);
+
+		var opciones3 = {
+				center: new google.maps.LatLng(latitud[3], longitud[3]),
+				zoom: parseInt(zoom[3]),
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				mapTypeControl: false,
+				zoomControl: true
+		}
+		map[3] = new google.maps.Map(document.getElementById("map_canvas4"), opciones3);
+
+		//incluimos temperatura, clima y semaforos
+		incluirDatosXML();
+	}
+
+
+	function generarIconoTrafico(tipo, color)
+	{
+		var icono = new google.maps.MarkerImage("/elementosExt/mapas/img/traf_" + color + "_" + tipo + ".png",
+			new google.maps.Size(46,37),
+			new google.maps.Point(0,0), //Origin
+			new google.maps.Point(46,31) //Anchor
+		);
+
+		return icono;
+	}
+
+	var contFilas = [];
+	contFilas[0] = 0;
+	contFilas[1] = 0;
+	contFilas[2] = 0;
+	contFilas[3] = 0;
+	function anyadeListado(poblacion, provincia, carretera, pk_inicial, pk_final, sentido, causa, tipo, color, fechahora_ini, pos)
+	{
+		var fecha = fechahora_ini.split(" ")[0];
+		fecha = fecha.split("-")[2] + "/" + fecha.split("-")[1] + "/" + fecha.split("-")[0];
+		var hora = fechahora_ini.split(" ")[1];
+		var clase="";
+		var icono="traf_interior_" + color + "_" + tipo + ".png";
+		if(contFilas[pos] % 2 == 1)
+			clase="odd";
+		var contenido = "<b>" + fecha + " " + hora + "</b><br />";
+		contenido += carretera + " del km. " + pk_inicial + " al " + pk_final + "<br />";
+		contenido += "Sentido: " + sentido + "<br />";
+		contenido += poblacion + " (" + provincia + ")<br />";
+		contenido += causa;
+
+		var mostrarTitle="";
+		if (color=="ROJO")
+			mostrarTitle="Circulación dificil por "+tipo;
+		if (color=="AMARILLO")
+			mostrarTitle="Circulación irregular por "+tipo;
+		if (color=="VERDE")
+			mostrarTitle="Circulación fluida por "+tipo;
+		if (color=="NEGRO")
+			mostrarTitle="Circulación cortada por "+tipo;
+
+
+		var html="<tr class=\"" + clase + "\"><th class=\"int-nada\"><img src="http://val.levante-emv.com/servicios/trafico/\&quot;/elementosExt/mapas/img/&quot;" + icono + "\" alt=\""+mostrarTitle+"\" title=\""+mostrarTitle+"\" /></th><td>" + contenido +"</td></tr>";
+		$("#tablaCiudad-"+pos).append(html);
+		contFilas[pos]++;
+	}
+
+	function anyadeListadoLocal(poblacion, descripcion, tipo, color, pos)
+	{
+		var clase="";
+		var icono="traf_interior_" + color + "_" + tipo + ".png";
+		if(contFilas[pos] % 2 == 1)
+			clase="odd";
+		var contenido = "";
+		contenido += descripcion;
+
+		var mostrarTitle="";
+		if (color=="ROJO")
+			mostrarTitle="Circulación dificil por "+tipo;
+		if (color=="AMARILLO")
+			mostrarTitle="Circulación irregular por "+tipo;
+		if (color=="VERDE")
+			mostrarTitle="Circulación fluida por "+tipo;
+		if (color=="NEGRO")
+			mostrarTitle="Circulación cortada por "+tipo;
+
+		var html="<tr class=\"" + clase + "\"><th class=\"int-nada\"><img src="http://val.levante-emv.com/servicios/trafico/\&quot;/elementosExt/mapas/img/&quot;" + icono + "\" alt=\""+mostrarTitle+"\" title=\""+mostrarTitle+"\" /></th><td>" + contenido +"</td></tr>";
+		$("#tablaCiudad-"+pos).append(html);
+		contFilas[pos]++;
+	}
+
+	function limpiarMarkers(){
+		//recorremos el array de markers y los borramos
+		for(i=0; i < gMarkers.length; i++){
+			if(gMarkers[i].getMap() == map[0])
+				gMarkers[i].setMap(null);
+		}
+	}
+
+	function cargarIncidencias(prov, soloProvincia, soloListado)
+	{
+		//limpio los markers antes de cargar
+		limpiarMarkers();
+
+		$("#tablaCiudad-0").children().remove();
+		if(!soloProvincia)
+		{
+		$("#tablaCiudad-1").children().remove();
+		$("#tablaCiudad-2").children().remove();
+		$("#tablaCiudad-3").children().remove();
+		}
+		jQuery.get("/elementosExt/mapas/xml/incidencias.xml", {},function(data) {
+
+       		var markers = data.documentElement.getElementsByTagName("incidencia");
+       		var cont = 0;
+
+       		for (var i = 0; i < markers.length; i++) {
+
+         		//Obtenemos los datos para ubicar los iconos de las incidencias
+					if(markers[i].getElementsByTagName("carretera")[0].childNodes.length>0)
+					carretera = markers[i].getElementsByTagName("carretera")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("poblacion")[0].childNodes.length>0)
+					poblacion = markers[i].getElementsByTagName("poblacion")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("pk_inicial")[0].childNodes.length>0)
+					pk_inicial = markers[i].getElementsByTagName("pk_inicial")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("pk_final")[0].childNodes.length>0)
+					pk_final = markers[i].getElementsByTagName("pk_final")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("sentido")[0].childNodes.length>0)
+						sentido = markers[i].getElementsByTagName("sentido")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("causa")[0].childNodes.length>0)
+						causa = markers[i].getElementsByTagName("causa")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("provincia")[0].childNodes.length>0)
+					provincia = markers[i].getElementsByTagName("provincia")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("fechahora_ini")[0].childNodes.length>0)
+					fechahora_ini = markers[i].getElementsByTagName("fechahora_ini")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("x")[0].childNodes.length>0)
+						latitudEPI = markers[i].getElementsByTagName("x")[0].childNodes[0].nodeValue;
+					if(markers[i].getElementsByTagName("y")[0].childNodes.length>0)
+						longitudEPI = markers[i].getElementsByTagName("y")[0].childNodes[0].nodeValue;
+              	address=carretera+", "+pk_inicial+", "+poblacion;
+
+              	if(causa.substr(0,1)==" ")
+						causa = causa.substr(1);
+					if(causa.substr(causa.length-1,1)==" ")
+						causa = causa.substr(0,causa.length-1);
+					causa = causa.substr(0,1).toUpperCase() + causa.substr(1).toLowerCase();
+					if(provincia.substr(0,1)==" ")
+						provincia = provincia.substr(1);
+					if(provincia.substr(provincia.length-1,1)==" ")
+						provincia = provincia.substr(0,provincia.length-1);
+					provincia = provincia.substr(0,1).toUpperCase() + provincia.substr(1).toLowerCase();
+					if(poblacion.substr(0,1)==" ")
+						poblacion = poblacion.substr(1);
+					if(poblacion.substr(poblacion.length-1,1)==" ")
+						poblacion = poblacion.substr(0,poblacion.length-1);
+					poblacion = poblacion.substr(0,1).toUpperCase() + poblacion.substr(1).toLowerCase();
+					if(sentido.substr(0,1)==" ")
+						sentido = sentido.substr(1);
+					if(sentido.substr(sentido.length-1,1)==" ")
+						sentido = sentido.substr(0,sentido.length-1);
+					if(fechahora_ini.substr(0,1)==" ")
+						fechahora_ini = fechahora_ini.substr(1);
+					if(fechahora_ini.substr(fechahora_ini.length-1,1)==" ")
+						fechahora_ini = fechahora_ini.substr(0,fechahora_ini.length-1);
+					sentido = sentido.substr(0,1).toUpperCase() + sentido.substr(1).toLowerCase();
+
+					tipo = jQuery.trim(markers[i].getElementsByTagName("tipo")[0].childNodes[0].nodeValue);
+              	color = jQuery.trim(markers[i].getElementsByTagName("nivel")[0].childNodes[0].nodeValue);
+
+              	iconoTrafico = generarIconoTrafico(tipo, color);
+
+              	var puntoMapa = new google.maps.LatLng(latitudEPI,longitudEPI);
+
+              	//Recorremos para cada mapa su ambito de busqueda para situar la incidencia
+              	//Los ambitos son autonomia, poblacion, provincia dependiendo de cada mapa
+              	numAmbitos = 1;
+              	if(soloProvincia == undefined || soloProvincia == false)
+              		numAmbitos = ambito.length;
+
+              	for (j=0; j<numAmbitos; j++)
+              	{
+              		if (ambito[j]=="autonomia")
+              			lugarIncidencia=markers[i].getElementsByTagName("autonomia")[0].childNodes[0].nodeValue;
+              		else
+              		if (ambito[j]=="provincia")
+              			lugarIncidencia=markers[i].getElementsByTagName("provincia")[0].childNodes[0].nodeValue;
+              		else
+              		{
+              			if(markers[i].getElementsByTagName("poblacion")[0].childNodes.length>0)
+	              			lugarIncidencia=markers[i].getElementsByTagName("poblacion")[0].childNodes[0].nodeValue;
+	              		else
+	              			lugarIncidencia=markers[i].getElementsByTagName("provincia")[0].childNodes[0].nodeValue;
+
+              		}
+
+              		if(prov != undefined)
+              			lugarIncidencia=markers[i].getElementsByTagName("provincia")[0].childNodes[0].nodeValue;
+
+              		//eliminamos espacios en blanco
+              		lugarIncidencia=jQuery.trim(lugarIncidencia);
+
+							var fecha = fechahora_ini.split(" ")[0];
+							fecha = fecha.split("-")[2] + "/" + fecha.split("-")[1] + "/" + fecha.split("-")[0];
+							var hora = fechahora_ini.split(" ")[1];
+							var contenido = "<b>" + fecha + " " + hora + "</b><br />";
+							contenido += carretera + " del km. " + pk_inicial + " al " + pk_final + "<br />";
+							contenido += "Sentido: " + sentido + "<br />";
+							contenido += poblacion + " (" + provincia + ")<br />";
+							contenido += causa;
+
+              		if (lugarIncidencia=="A CORUÑA")
+              			lugarIncidencia = lugarIncidencia.replace("Ñ","N");
+
+              			//Si la incidencia pertenece al lugarIncidencia la marcamos en el mapa
+              		if ((lugarIncidencia==busqueda[j] && prov == undefined) || (prov!= undefined && lugarIncidencia == prov) || (prov=="España"))
+              			{
+
+							//marcaPunto(map[j], address, iconoTrafico, contenido, puntoMapa);
+							if ((tipo=="OBRAS" && mostrarObras) || (tipo=="CONO" && mostrarConos) || (tipo=="METEOROLOGICA" && mostrarMeteorologia) || (tipo=="RETENCION" && mostrarRetenciones) || (tipo=="PUERTO" && mostrarPuerto) || (tipo=="PUERTOS DE MONTAÑA" && mostrarPuerto))
+							anyadeListado(poblacion, provincia, carretera, pk_inicial, pk_final, sentido, causa, tipo, color, fechahora_ini, j);
+						}
+
+						if(soloListado == undefined || soloListado == false)
+						if ((tipo=="OBRAS" && mostrarObras) || (tipo=="CONO" && mostrarConos) || (tipo=="METEOROLOGICA" && mostrarMeteorologia) || (tipo=="RETENCION" && mostrarRetenciones) || (tipo=="PUERTO" && mostrarPuerto) || (tipo=="PUERTOS DE MONTAÑA" && mostrarPuerto))
+							marcaPunto(map[j], address, iconoTrafico, contenido, puntoMapa);
+
+					}
+				}	//for
+
+     		});
+
+
+     			//Mostramos las incidencias del xml de datos
+	  			for (var j=0; j<localizacionIncidencia.length; j++)
+				{
+					latitudLongitud[j]=latitudLongitud[j].replace("(","");
+					latitudLongitud[j]=latitudLongitud[j].replace(")","");
+
+					var puntoMapa2 = new google.maps.LatLng(latitudLongitud[j].split(",")[0],latitudLongitud[j].split(",")[1]);
+					iconoTrafico = generarIconoTrafico(tipoIncidencia[j], nivelIncidencia[j]);
+					//marcaPuntoInternas(map[0], localizacionIncidencia[j], iconoTrafico, descripcionIncidencia[j]);
+					if(soloListado == undefined || soloListado == false)
+					marcaPunto(map[0], localizacionIncidencia[j], iconoTrafico, descripcionIncidencia[j], puntoMapa2);
+					if ((prov == undefined) || (prov!= undefined && provIni == prov))
+					{
+						anyadeListadoLocal(ciudadIncidencia[j], descripcionIncidencia[j], tipoIncidencia[j], nivelIncidencia[j], 0);
+					//if(!soloProvincia)
+
+
+					for (h=1; h<ambito.length; h++)
+   	         {
+         	   	if (ciudadIncidencia[j]==busqueda[h])
+            		{
+            			if(!soloProvincia)
+            			{
+							anyadeListadoLocal(ciudadIncidencia[j], descripcionIncidencia[j], tipoIncidencia[j], nivelIncidencia[j], h);
+							//marcaPuntoInternas(map[h], localizacionIncidencia[j], iconoTrafico, descripcionIncidencia[j]);
+							marcaPunto(map[h], localizacionIncidencia[j], iconoTrafico, descripcionIncidencia[j], puntoMapa2);
+							}
+						}
+					}
+					}
+				}
+
+	}
+
+	function initialize() {
+
+			var lat = new Number(latitud[0]);
+			var lon = new Number(longitud[0]);
+			var zoom1 = new Number(zoom[0]);
+
+			var carretera="";
+			var poblacion="";
+			var pk_inicial="";
+			var pk_final="";
+			var sentido="";
+			var causa="";
+			var provincia="";
+			var address="";
+			var tipo="";
+			var color="";
+			var lugarIncidencia="";
+			var fechahora_ini ="";
+
+        	inicializarMapas();
+
+			cargarIncidencias();
+    }
+
+   function incluirDatosXML()
+	{
+		for (var i=0; i<ciudadDato.length; i++)
+		{
+			if (i==0)
+			{
+				if (semaforoDato[i]!="no")
+				{
+					var semaforo = new Semaforo();
+
+					var container = document.createElement("div");
+
+					var semaforoDiv = document.createElement("img");
+					semaforoDiv.setAttribute("class", "semaforo");
+
+					container.appendChild(semaforoDiv);
+					semaforoDiv.setAttribute("src", "img/semaforo_rojo.png");
+
+					map[1].controls[google.maps.ControlPosition.TOP_RIGHT].push(container);
+
+					semaforo.setColor(semaforoDato[i], map[1], semaforoDiv);
+				}
+			}
+			if (i==1)
+			{
+				if (semaforoDato[i]!="no")
+				{
+
+					var semaforo2 = new Semaforo(map[2]);
+
+					var container = document.createElement("div");
+					var semaforoDiv = document.createElement("img");
+					semaforoDiv.setAttribute("class", "semaforo");
+					container.appendChild(semaforoDiv);
+					semaforoDiv.setAttribute("src", "img/semaforo_rojo.png");
+
+					semaforo2.setColor(semaforoDato[i], map[2], semaforoDiv);
+					map[2].controls[google.maps.ControlPosition.TOP_RIGHT].push(container);
+				}
+			}
+
+			if (i==2)
+			{
+				if (semaforoDato[i]!="no")
+				{
+					var semaforo3 = new Semaforo(map[3]);
+
+					var container = document.createElement("div");
+					var semaforoDiv = document.createElement("img");
+					semaforoDiv.setAttribute("class", "semaforo");
+					container.appendChild(semaforoDiv);
+					semaforoDiv.setAttribute("src", "img/semaforo_rojo.png");
+
+					semaforo3.setColor(semaforoDato[i], map[3], semaforoDiv);
+					map[3].controls[google.maps.ControlPosition.TOP_RIGHT].push(container);
+				}
+			}
+
+			$("#clima"+(i+1)).attr("class",climaDato[i]+"_mini");
+			$("#temp"+(i+1)).html(temperaturadDato[i]+"&deg;");
+		}
+	}
+
+	function cambiaProvincia(provincia)
+	{
+		var cadenaBusqueda=provincia + ", España";
+		provinciaGlobal=provincia;
+
+		if (provincia=="todas")
+		{
+			cadenaBusqueda="España";
+			provinciaGlobal="España";
+		}
+
+		geocoder.geocode({"address":cadenaBusqueda}, function(results, status){
+			if (status == google.maps.GeocoderStatus.OK) {
+					if (provincia=="todas"){
+						map[0].setCenter(results[0].geometry.location);
+						map[0].setZoom(8);
+					}
+					else {
+						map[0].setCenter(results[0].geometry.location);
+						map[0].setZoom(8);
+					}
+					cargarIncidencias(provinciaGlobal, true);
+			}
+			else
+				alert('Geocode was not successful for the following reason: ' + status);
+		});
+	}
+
+	function cambiarValor(tipo)
+	{
+		if($("#IncidenciasCONO").is(":checked")==true)
+			mostrarConos=true;
+		else
+			mostrarConos=false;
+
+		if($("#IncidenciasRETENCION").is(":checked")==true)
+			mostrarRetenciones=true;
+		else
+			mostrarRetenciones=false;
+
+		if($("#IncidenciasOBRAS").is(":checked")==true)
+			mostrarObras=true;
+		else
+			mostrarObras=false;
+
+		if($("#IncidenciasPUERTOS").is(":checked")==true)
+			mostrarPuerto=true;
+		else
+			mostrarPuerto=false;
+
+		if($("#IncidenciasMETEOROLOGICA").is(":checked")==true)
+			mostrarMeteorologia=true;
+		else
+			mostrarMeteorologia=false;
+
+		cargarIncidencias(provinciaGlobal, true);
+	}
+
+    </script>
+
+<script language="JavaScript">
+<!--
+			function mostrarLeyenda()
+			{
+					//Si ha cambiado el tipo de fichero a mostrar, hay que visualizar unos campos
+					var leyenda = document.getElementById("leyenda");
+
+					if(leyenda.style.display=="none")
+						leyenda.style.display="inline";
+
+					else
+						leyenda.style.display="none";
+			}
+
+
+			function cambiarMapa(idMapa)
+			{
+				var mapaGrande = document.getElementById("mapaGrande");
+				var mapaPequenyo = document.getElementById(idMapa);
+
+				var aux = mapaGrande.src;
+				mapaGrande.src = mapaPequenyo.src;
+				mapaPequenyo.src = aux;
+
+			}
+//-->
+</script>
+
+	</head>
+
+
+
+	<body onload="cargarXML();">
+ <!-- START Nielsen Online SiteCensus V6.0 -->
+  <!-- script type="text/javascript" src="/elementosWeb/js/nielsen.js"></script>
+  <script type="text/javascript">nol_t({cid:"es-epi",content:"0",server:"secure-uk"}).record().post();</script -->
+  <noscript><img src="http://secure-uk.imrworldwide.com/cgi-bin/m?ci=es-epi&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""></noscript>
+ <!-- END Nielsen Online SiteCensus V6.0 -->
+ <!-- Begin comScore Tag -->
+ <div id="reload-comscore">
+ <script>
+	var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "8731705" });
+        (function() {
+        	var s = document.createElement("script"),
+                el = document.getElementsByTagName("script")[0];
+                s.async = true;
+                s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+                el.parentNode.insertBefore(s,el);
+        })();
+ </script>
+ <noscript>
+ 	<img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=8731705&amp;cv=2.0&amp;cj=1">
+ </noscript>
+ </div>
+ <!-- End comScore Tag -->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-545688-3']);
+  _gaq.push(['_setDomainName', 'levante-emv.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- END Google Analytics -->
+<!-- Cxense script begin -->
+<script type="text/javascript">
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+cX.callQueue.push(['setSiteId', '9222280035583220957']);
+cX.callQueue.push(['sendPageViewEvent']);
+</script>
+<script type="text/javascript">
+(function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async';
+scriptEl.src = ('https:' == location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js';
+var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {};} ());
+</script>
+<!-- Cxense script end -->
+
+<!-- DIV PAGINA -->
+<div id="pagina" style="display:block">
+
+
+
+	<div id="publicidad_top3" style="left:0px;margin:0;position:absolute;top:0;\">
+	<script type="text/javascript">
+		<!--
+		if (screen.width >= 1280)
+		{
+			document.getElementById("publicidad_top3").style.left = (screen.width/2+500)+"px";
+			try
+			{
+				OAS_AD('Top3');
+			}
+			catch(err){}
+		}
+		//-->
+	</script>
+</div>
+<div class="contenedor" id="Publicidad1">
+	<div class="pub_728x90" id="728x90" style="background-image:none;width:auto;height:auto;">
+<div class="pub_728x90" id="728x90" style="background-image:none;width:auto;height:auto;">
+</div>
+
+	</div>
+	<div class="pub_234x90" id="234x90" style="background-image:none;width:auto;height:auto;">
+<div class="pub_234x90" id="234x90" style="background-image:none;width:auto;height:auto;">
+</div>
+
+	</div>
+</div>
+
+
+
+	<div class="bloqueclear"></div>
+	<div class="cabecera">
+<!-- Menú Superior------------------------------------------------------------- -->
+<div class="menu_superior">
+<div class="iconos_sociales">
+<ul>
+<li class="rssIcon"><a target="_top" class="icono" href="../rss/rss.jsp.html" title="RSS">RSS</a></li>
+<li class="twitterIcon"><a target="_top" class="icono" href="https://twitter.com/levante_emv" title="Twitter">Twitter</a></li>
+<li class="fbIcon"><a target="_top" class="icono" href="http://www.facebook.com/levante.emv" title="Facebook">Facebook</a></li>
+<li class="fbGoogle"><a target="_top" title="Google +" href="https://plus.google.com/+levanteemv" class="icono">Google</a></li>
+<li class="mailIcon"><a target="_top" class="icono" href="../contacte/contacte.jsp.html"> </a></li>
+</ul>
+			</div>
+<div class="hemeroteca">
+<a target="_top" href="../hemeroteca/hemeroteca.jsp.html" title="noticias de hemeroteca">Hemeroteca</a>
+		</div>
+<div class="suscripcion">
+<a title="Suscríbete" href="trafico-en-valencia.html#" onclick="javascript:despleSuscripcion();return false;"><span>Subscriu-te</span></a>
+<div style="display:none" class="desple_suscripcion" id="despleSuscripcion">
+     <ul>
+<li><a target="_blank" title="Suscripción" href="http://micuenta.levante-emv.com/suscripcion/">Subscripció</a></li>
+                 <li><a target="_blank" title="PDF" href="http://hemerotecapdf.levante-emv.com/">PDF</a></li>
+                 <li><a target="_blank" title="Orbyt" href="http://quiosco.levante-emv.orbyt.es/">ORBYT</a></li>
+     </ul>
+	</div>
+</div>
+<div class="clasificados">
+	<a target="_top" href="trafico-en-valencia.html#" title="Suscríbete" onclick="javascript:despleClasificados();return false;"><span>Classificats </span></a>
+	<div style="display:none" class="desple_clasificados" id="despleClasificados">
+  		<ul>
+      	<li class="empleo"><a target="_top" title="Iberempleos.es" href="http://www.iberempleos.es/">Iber<span>ocupacions</span>.és</a></li>
+          <li class="anuncio"><a target="_top" title="Iberanuncio.es" href="http://www.iberanuncio.es/">Iber<span>anunci</span>.és</a></li>
+          <li class="pisos"><a target="_top" title="Iberpisos.es" href="http://www.iberpisos.es/">Iber<span>pisos</span>.és</a></li>
+          <li class="coches"><a target="_top" title="Ibercoches.es" href="http://www.ibercoches.es/">Iber<span>cotxes</span>.és</a></li>
+          <li class="cursos"><a target="_top" title="Ibercursos.es" href="http://www.ibercursos.es/">Iber<span>cursos</span>.és</a></li>
+      </ul>
+	</div>
+</div>
+<div class="fechaCabecera"><script type="text/javascript">document.write( textosemana[diasemana]+", "+diames+" "+ textomes[mes]+ " " +ano );</script></div>
+<div id="estadoConexion" class="no_identificado"></div>
+<div class="trafico"><a target="_top" tabindex="-1" class="MenuBarItemSubmenu" href="trafico-en-valencia.html" onclick="javascript:return muestraDivLayerFlotante('trafico');" title="Tráfico">Trànsit</a></div>
+<div class="television"><a target="_top" tabindex="-1" class="MenuBarItemSubmenu" href="http://ocio.levante-emv.com/tv/" onclick="javascript:return muestraDivLayerFlotante('tv');" title="Tv">TV</a></div>
+<div class="cartelera"><a target="_top" class="MenuBarItemSubmenu" href="http://ocio.levante-emv.com/cine/cartelera/valencia/" onclick="javascript:return muestraDivLayerFlotante('cartelera');" title="Cartelera de Cine">Cartellera</a></div>
+<div class="cerrar"></div>
+</div>
+<div class="bloque_central">
+<div class="logo_media">
+<a target="_top" href="../../index.html" title="Levante-EMV" alt="Levante-EMV"><img width="230" height="60" border="0" src="../../elementosWeb/mediaweb/images1010/cabecera/cabecera.png" alt="Levante-EMV"></a>
+</div>
+<div class="publi_cabecera_270">
+</div>
+<div class="bloque_tiempo">
+<div class="buscador">
+<form onsubmit="return preparaEnvio(this);" id="cse-search-box" action="http://val.levante-emv.com/buscar/default.jsp" target="_top">
+<input type="hidden" name="cx" value="partner-pub-8592438293566705:6464800882">
+<input type="hidden" value="FORID:10;NB:1" name="cof">
+<input type="hidden" value="ISO-8859-15" name="ie">
+<input type="hidden" name="q">
+<input type="text" class="buscar" name="q1">
+<input type="submit" class="btnBuscar" value="" name="sa">
+					</form>
+</div>
+<div class="el_tiempo">
+</div>
+</div>
+</div>
+<!-- ------------------------------------------------------------- -->
+<div class="menu_inferior">
+<div class="menuPremium">
+<ul id="menu">
+<li>
+<a title="C.Valenciana" href="../../comunitat-valenciana/index.html" target="_top">C.Valenciana</a>
+</li>
+<li>
+<a title="Más noticias" href="../../espana/index.html" target="_top">Més notícies</a>
+</li>
+<li>
+<a title="Deportes" href="../../deportes/index.html" target="_top">Esports</a>
+</li>
+<li>
+<a title="Economía" href="../../economia/index.html" target="_top">Economia</a>
+</li>
+<li>
+<a title="Opinión" href="../../opinion/index.html" target="_top">Opinió</a>
+</li>
+<li>
+<a title="Ocio" href="http://ocio.levante-emv.com/" target="_top">Oci</a>
+</li>
+<li>
+<a title="Vida y Estilo" href="../../vida-y-estilo/index.html" target="_top">Vida i Estil</a>
+</li>
+<li>
+<a title="Participación" href="../../participacion/index.html" target="_top">Participació</a>
+</li>
+<li>
+<a title="Multimedia" href="http://multimedia.levante-emv.com" target="_top">Multimèdia</a>
+</li>
+<li>
+<a title="Servicios" href="http://val.levante-emv.com/servicios/servicios.jsp" target="_top">Serveis</a>
+</li>
+<li id="premiumHome" class="premiumHome">
+<a class="texto" href="../../suscriptor/index.html" title="Suscriptor">Subscriptor</a><span id="mascaraMenu" class="mascaraMenuAzul"><img class="imagenbotondesplegable" onclick="javascript:desplegarListaSeccionesMenuAbonados();" id="premiumHomeImg" src="../../elementosWeb/mediaweb/images/premium/menu/spriteMenuDesplegable.png" alt="secciones"><span class="borrar"></span></span>
+<ul id="submenudesp" class="submenudesp">
+<li>
+<a href="../../suscriptor/comunitat-valenciana/index.html" title="Comunitat Valenciana">Comunitat Valenciana</a>
+</li>
+<li>
+<a href="../../suscriptor/valencia/index.html" title="Valencia">València</a>
+</li>
+<li>
+<a href="../../suscriptor/castello/index.html" title="Castelló">Castelló</a>
+</li>
+<li>
+<a href="../../suscriptor/comarcas/index.html" title="Comarcas">Comarques</a>
+</li>
+<li>
+<a href="../../suscriptor/safor/index.html" title="La Safor">La Safor</a>
+</li>
+<li>
+<a href="../../suscriptor/ribera/index.html" title="La Ribera">La Ribera</a>
+</li>
+<li>
+<a href="../../suscriptor/costera/index.html" title="La Costera-La Canal-La Vall d'Albaida">La Costera-La Canal-La Vall d'Albaida</a>
+</li>
+<li>
+<a href="../../suscriptor/morvedre/index.html" title="El Camp de Morvedre">El Camp de Morvedre</a>
+</li>
+<li>
+<a href="../../suscriptor/horta/index.html" title="L´Horta">L´Horta</a>
+</li>
+<li>
+<a href="../../suscriptor/marina/index.html" title="La Marina">La Marina</a>
+</li>
+<li>
+<a href="http://val.levante-emv.com/suscriptor/deportes/" title="Deportes">Esports</a>
+</li>
+<li>
+<a href="../../suscriptor/economia/index.html" title="Economía">Economia</a>
+</li>
+<li>
+<a href="../../suscriptor/opinion/index.html" title="Opinión">Opinió</a>
+</li>
+<li>
+<a href="../../suscriptor/cultura/index.html" title="Cultura">Cultura</a>
+</li>
+<li>
+<a href="http://val.levante-emv.com/suscriptor/posdata/" title="Posdata">Postdata</a>
+</li>
+<li class="noborde">
+<a href="http://val.levante-emv.com/suscriptor/emv/" title="EMV">EMV</a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="cerrar"></div>
+</div>
+<div class="submenu">
+</div>
+</div>
+</div>
+<div class="contenedor" id="miga_servicios">
+<div class="divLayerFlotante" id="DivLayerFlotante"></div>
+</div>
+
+
+
+
+<div class="contenedor">
+	<div class="noticias">
+		<div class="bloqueclear"></div>
+			<div style="width: 600px; float: left;">
+				<a href="../../index.html">Levante-EMV </a>  <a href="trafico-en-valencia.html"><b>Trànsit a València</b></a>
+			</div>
+			<div class="bloqueclear"></div>
+			<div style="width:100%;overflow: hidden;">
+
+
+
+
+
+
+<!-- Interior Asturias ---------------------------------------------------------------------->
+<div class="radio650">
+<h1 style="font-family: Arial, Helvetica, sans-serif; font:Arial, Helvetica, sans-serif; color:#003969; font-size: 30px; font-weight:bold; line-height: 40px">Trànsit a València</h1>
+<div class="int-banda">Trànsit en la Comarca</div>
+<div style="height: 363px;width: 428;float:left;position:relative;">
+<div id="map_canvas1" class="int-mapagrande" style="width:428px; height: 363px"></div>
+</div>
+<div class="int-textosgrande">
+<table summary="Valores del tráfico" id="tablaCiudad-0" class="listadoIncidencias">
+
+	</table>
+
+
+</div>
+<div class="int-radio650">
+<div class="int-leyenda"><img src="img/leyendatrafico.gif" alt="Leyenda de símbolos de tráfico"></div>
+<div class="desplegableprovincias">
+	 Consulte el trànsit d'altres províncies:
+    <select name="jumpMenu" id="jumpMenu" class="desplegaprovincias" onchange="cambiaProvincia(this.value)">
+      <option value="" selected>Canviar de província:</option>
+      <option value="todas">Totes</option>
+	  <option value="A CORUÑA">la Corunya</option>
+	  	<option value="ALAVA">Àlaba</option>
+      <option value="ALBACETE">Albacete</option>
+      <option value="ALICANTE/ALACANT">Alacant</option>
+      <option value="ALMERIA">Almeria</option>
+      <option value="ASTURIAS">Astúries</option>
+      <option value="AVILA">Avila</option>
+      <option value="BADAJOZ">Badajoz</option>
+      <option value="BARCELONA">Barcelona</option>
+      <option value="BURGOS">Burgos</option>
+      <option value="CACERES">Càceres</option>
+      <option value="CADIZ">Cadis</option>
+      <option value="CANTABRIA">Cantàbria</option>
+      <option value="CASTELLON/CASTELLO">Castelló</option>
+      <option value="CIUDAD REAL">Ciudad Real</option>
+      <option value="CUENCA">Conca</option>
+      <option value="CORDOBA">Còrdova</option>
+      <option value="GIRONA">Girona</option>
+      <option value="GRANADA">Granada</option>
+      <option value="GUADALAJARA">Guadalajara</option>
+      <option value="GUIPUZCOA">Guipúscoa</option>
+      <option value="HUELVA">Huelva</option>
+      <option value="HUESCA">Huesca</option>
+      <option value="ILLES BALEARS">Illes Balears</option>
+      <option value="JAEN">Jaén</option>
+      <option value="LA RIOJA">La Rioja</option>
+      <option value="LAS PALMAS">Las Palmas</option>
+      <option value="LEON">León</option>
+      <option value="LLEIDA">Lleida</option>
+      <option value="LUGO">Lugo</option>
+      <option value="MALAGA">Màlaga</option>
+      <option value="MADRID">Madrid</option>
+      <option value="MELILLA">Melilla</option>
+      <option value="MURCIA">Murcia</option>
+      <option value="NAVARRA">Navarra</option>
+      <option value="OURENSE">Orense</option>
+      <option value="PALENCIA">Palencia</option>
+      <option value="PONTEVEDRA">Pontevedra</option>
+      <option value="SALAMANCA">Salamanca</option>
+      <option value="SEGOVIA">Segòvia</option>
+      <option value="SEVILLA">Sevilla</option>
+      <option value="SORIA">Soria</option>
+      <option value="SANTA CRUZ DE TENERIFE">Sta. Cruz De Tenerife</option>
+      <option value="TARRAGONA">Tarragona</option>
+      <option value="TERUEL">Teruel</option>
+      <option value="TOLEDO">Toledo</option>
+      <option value="VALENCIA">València</option>
+      <option value="VALLADOLID">Valladolid</option>
+		<option value="VIZCAYA">Biscaia</option>
+      <option value="ZAMORA">Zamora</option>
+      <option value="ZARAGOZA">Zaragoza</option>
+    </select>
+</div>
+</div>
+<div>
+	Seleccione el tipus d'incidències a mostrar en el mapa:<br>
+ 	<label>
+		<input type="checkbox" class="ftl" onchange="cambiarValor('CONO');" id="IncidenciasCONO" name="IncidenciasCONO" value="1" checked>
+		<span class="cono">Cons</span>
+	</label>
+	<label>
+		<input type="checkbox" class="ftl" onchange="cambiarValor('RETENCION');" id="IncidenciasRETENCION" name="IncidenciasRETENCION" value="1" checked>
+		<span class="reten">Retencions</span>
+	</label>
+	<label class="ftl" for="IncidenciasOBRAS_0">
+		<input type="checkbox" class="ftl" onchange="cambiarValor('OBRAS');" id="IncidenciasOBRAS" name="IncidenciasOBRAS" value="1">
+		<span class="obras">Obres</span>
+	</label>
+	<label>
+		<input type="checkbox" class="ftl" onchange="cambiarValor('PUERTO');" id="IncidenciasPUERTOS" name="IncidenciasPUERTOS" value="1" checked>
+		<span class="puertos">Ports</span>
+	</label>
+	<label>
+		<input type="checkbox" class="ftl" onchange="cambiarValor('METEOROLOGICA');" id="IncidenciasMETEOROLOGICA" name="IncidenciasMETEOROLOGICA" value="1" checked>
+		<span class="mete">Meteorològiques</span>
+	</label>
+</div>
+<br>
+<div style="height:1px; clear:both"></div>
+<div class="int-cajamapatriple">
+<h3 class="int-banda">Trànsit a València</h3>
+<div style="width: 208px; height: 180px;position:relative;clear:both">
+<div id="map_canvas2" class="int-cajatriple" style="width: 208px; height: 180px;"></div>
+</div>
+<div class="int-tablacity">
+<table id="tablaCiudad-1" summary="Valores del tráfico" class="listadoIncidencias">
+
+	  </table>
+</div>
+</div>
+<!--int-cajamapatriple -->
+
+<div class="int-cajamapatriple">
+<h3 class="int-banda">Trànsit a Castelló</h3>
+<div style="width: 208px; height: 180px;position:relative;clear:both">
+<div id="map_canvas3" class="int-cajatriple" style="width: 208px; height: 180px;"></div>
+</div>
+<div class="int-tablacity">
+<table id="tablaCiudad-2" summary="Valores del tráfico" class="listadoIncidencias">
+
+	  </table>
+    </div>
+</div>
+<!--int-cajamapatriple -->
+
+<div class="int-cajamapatriple-b">
+<h3 class="int-banda">Trànsit a Alacant</h3>
+<div style="width: 208px; height: 180px;position:relative;clear:both">
+<div id="map_canvas4" class="int-cajatriple" style="width: 208px; height: 180px;"></div>
+</div>
+<div class="int-tablacity">
+<table id="tablaCiudad-3" summary="Valores del tráfico" class="listadoIncidencias">
+
+	  </table>
+    </div>
+</div>
+<!--int-cajamapatriple -->
+
+
+</div>
+<!--650 -->
+<div style="height:1px; clear:both"></div>
+<div style="text-align:left">
+<a href="http://www.dgt.es" target="_blank" alt="Fuente: Dirección General de Tráfico, Ministerio del Interior">Font: Direcció general de trànsit, Ministeri de l'Interior</a>. <a href="http://www.levante-emv.com" target="_blank" alt="Fuente de tráfico metropolitano: Elaboración Propia">Font de trànsit metropolità: Elaboració Pròpia</a> </div>
+
+
+
+
+<!-- FIN Interior Asturias ---------------------------------------------------------------------->
+
+
+
+			    <div class="bloqueclear"></div>
+			 </div>
+		<div class="bloqueclear"></div>
+	</div>
+
+	<div class="servicios">
+
+		<div id="divderecha_tiempo" class="servicio">
+				<div id="cajaTiempo" class="mostrar">
+					<div class="minicajon">
+						<div class="minireloj" id="hora"></div>
+
+						<a href="http://tiempo.levante-emv.com/?pId=16&amp;pNivel=6" style="text-decoration: none;"><div id="clima1" class="llovizna_mini">
+<span id="temp1" class="minigrados"> - </span>València</div></a>
+						<a href="http://tiempo.levante-emv.com/?pId=14&amp;pNivel=6" style="text-decoration: none;"><div id="clima2" class="soleado_mini">
+<span id="temp2" class="minigrados"> - </span>Castelló</div></a>
+						<a href="http://tiempo.levante-emv.com/?pId=38&amp;pNivel=6" style="text-decoration: none;"><div id="clima3" class="tormenta_mini">
+<span id="temp3" class="minigrados"> - </span>Alacant</div></a>
+
+
+					</div>
+<!--minicajon -->
+				</div>
+				</div>
+				<div class="bloqueclear"></div>
+
+		<div class="servicio" id="div1_1">
+<div id="caja_48_1_1_0" class="nodesborda" style="visibility:visible; display:block;">
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+<div class="servicio" id="div1_2">
+</div>
+<div class="servicio" id="div1_3">
+</div>
+<div class="pub_340x250" id="div1_4">
+<div id="caja_48_1_4_0" style="visibility:visible; display:block;">
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+<div class="servicio" id="div1_5">
+<div id="caja_48_1_5_0" class="nodesborda" style="visibility:visible; display:block;">
+<div id="controles" style="position:relative; margin-bottom:-18; width:40; height:18; top:5; left:275; z-index: 2; overflow: visible; visibility: visible;">
+<img src="../../elementosWeb/mediaweb/images/iconos/anterior.gif" width="18" height="18" alt="anterior">
+<img src="../../elementosWeb/mediaweb/images/iconos/siguiente.gif" width="18" height="18" style="cursor:pointer" onclick="javascript:caja_siguiente('0','caja_48_1_5_');" alt="siguiente">
+</div>
+
+</div>
+<div id="caja_48_1_5_1" class="nodesborda" style="visibility:hidden; display:none;">
+<div id="controles" style="position:relative; margin-bottom:-18; width:40; height:18; top:5; left:275; z-index: 2; overflow: visible; visibility: visible;">
+<img src="../../elementosWeb/mediaweb/images/iconos/anterior.gif" width="18" height="18" style="cursor:pointer" onclick="javascript:caja_anterior('1','caja_48_1_5_');" alt="anterior">
+<img src="../../elementosWeb/mediaweb/images/iconos/siguiente.gif" width="18" height="18" alt="siguiente">
+</div>
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+<div class="servicio" id="div1_6">
+<div id="caja_48_1_6_0" class="nodesborda" style="visibility:visible; display:block;">
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+<div class="servicio" id="div1_7">
+<div id="caja_48_1_7_0" class="nodesborda" style="visibility:visible; display:block;">
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+<div class="servicio" id="div1_8">
+</div>
+<div class="servicio" id="div1_9">
+</div>
+<div class="servicio" id="div1_11">
+</div>
+<div class="servicio" id="div1_12">
+</div>
+<div class="servicio" id="div1_13">
+<div id="caja_48_1_13_0" style="visibility:visible; display:block;">
+
+</div>
+<div class="fin_servicio" style="border-top: none; margin: 0px; padding: 2px 0px 0px;"></div>
+</div>
+
+	</div>
+	<div class="bloqueclear"></div>
+			<!-- ------ COLUMNA DERECHA ------	-->
+</div>
+
+<div class="bloqueclear"></div>
+<div class="pie_pagina">
+<div class="barra_sup">
+</div>
+<div class="bordes_pie">
+<div class="contenido_pie">
+<div class="logo_pie">
+<a target="_top" href="../../index.html"><img width="221" height="42" border="0" alt="noticias" src="../../elementosWeb/mediaweb/images1010/pie/logo_pie.jpg"></a><a href="../../mapaweb/index.html" title="Mapa web" target="_top"><span>Mapa web</span></a>
+</div>
+<div class="nodesborda">
+<div class="columna una">
+<div class="titular_pie"><a target="_top" href="../../comunitat-valenciana/index.html" title="Comunitat Valenciana">C. Valenciana</a></div>
+<ul>
+<li><a target="_top" href="../../valencia/index.html" title="Valencia">València</a></li>
+<li><a target="_top" href="http://tiempo.levante-emv.com" title="El tiempo">El temps</a></li>
+<li><a target="_top" href="../../especiales/transportes-valencia.html" title="Transportes en Valencia">Transports a València</a></li>
+<li><a target="_top" href="trafico-en-valencia.html" title="Tráfico en Valencia">Trànsit a València</a></li>
+<li><a target="_top" href="http://val.ocio.levante-emv.com/cine/cartelera/valencia/" title="Cartelera de cine">Cartellera de cinema</a></li>
+<li><a target="_top" href="http://fallas.levante-emv.com" title="Fallas">Falles</a></li>
+<li><a target="_top" href="http://www.levante-emv.com/servicios/servicios.jsp" title="Fallas">Serveis</a></li>
+</ul>
+</div>
+
+<div class="columna dos">
+<div class="titular_pie">Classificats</div>
+<ul>
+<li><a title="tucasa.com" href="http://www.tucasa.com/" target="_top">tucasa.com</a></li>
+<li><a target="_top" href="http://www.iberpisos.es/" title="Iberpisos">Iberpisos</a></li>
+<li><a target="_top" href="http://www.iberanuncio.es/" title="Iberanuncio">Iberanuncio</a></li>
+<li><a target="_top" href="http://www.ibercoches.es/" title="Ibercoches">Ibercoches</a></li>
+<li><a target="_top" href="http://www.iberempleos.es/" title="Iberempleo">Iberempleo</a></li>
+<li><a target="_top" href="http://levante.clasificados.epi.es/" title="Anuncios breves">Anuncis breus</a></li>
+<li><a target="_top" href="http://www.cambalache.es/" title="Cambalache">Cambalache</a></li>
+</ul>
+</div>
+
+<div class="columna tres">
+<div class="titular_pie"><a target="_top" href="../../especiales/index.html" title="Especiales">Especials</a></div>
+<ul>
+<li><a target="_top" href="http://www.laloterianavidad.com" title="Loterí­a Navidad">Loteria Nadal</a></li>
+<li><a target="_top" href="http://www.laloterianavidad.com/loteria-del-nino.html" title="Loterí­a el Niño">Loterí­al Xiquet</a></li>
+<li><a target="_top" href="http://formula1.lne.es" title="Fórmula 1">Fórmula 1</a></li>
+<li><a target="_top" href="http://www.premios-cine.com/" title="Premios Cine">Premis Cinema</a></li>
+<li><a target="_top" href="http://www.premios-cine.com/globos-de-oro/" title="Premios Globos de Oro">Premis Globus d'Or</a></li>
+<li><a target="_top" href="../../elecciones/index.html" title="Elecciones Generales">Eleccions Generals­</a></li>
+<li><a target="_top" href="http://elecciones.levante-emv.com/resultados-elecciones/generales/" title="Resultados Elecciones">Resultats Eleccions</a></li>
+</ul>
+</div>
+
+<div class="columna cuatro">
+<div class="titular_pie">levante-emv.com</div>
+<ul>
+<li><a target="_top" href="../html/contacto.html" title="Contacto">Contacte</a></li>
+<li><a target="_top" href="../html/contacto.html" title="Atención al lector (edición impresa)">Atenció al lector</a></li>
+<li><a target="_top" href="../corporativo/conozcanos.html" title="Conózcanos">Conega'ns</a></li>
+<li><a target="_top" href="../corporativo/localizacion.html" title="Localización">Localització</a></li>
+<li><a target="_top" href="http://club.levante-emv.com/" title="Club Diario Levante">Club Diari Levante</a></li>
+<li><a target="_top" href="http://medias.levante-emv.com/docs/politica_ambiental.pdf" title="Política Medioambiental">Política Mediambiental</a></li>
+<li><a target="_blank" href="../legal/aviso-legal.html" title="Aviso legal">Avís legal</a></li>
+<li><a target="_blank" title="Política de cookies" href="../legal/politica-cookies2.html">Política de cookies</a></li>
+</ul>
+</div>
+
+<div class="columna cinco">
+<div class="titular_pie">Publicitat</div>
+<ul>
+<li><a target="_top" href="../publicidad/publicidad.jsp.html" title="Publicidad">Publicitat</a></li>
+</ul>
+</div>
+</div>
+<div class="separador_pie"></div>
+<div class="nodesborda">
+<div class="titular_pie2">Altres webs del Grup Editorial Premsa Ibèrica</div>
+<div class="logo_epi"></div>
+<div name="webs_links" class="webs_links">
+<!-- a&ntilde;adido atributo name para responsive -->
+<!-- elemento a&ntilde;adido al responsive (apertura)-->
+<div class="itemOculto">
+<a onclick="return false;" class="enlaceOculto" href="trafico-en-valencia.html#webs_links">Altres webs del Grup Editorial Premsa Ibèrica</a>
+<div>
+<!-- **** -->
+<a target="_blank" href="http://www.diaridegirona.cat/">Diari de Girona</a> | <a target="_blank" href="http://www.diariodeibiza.es/">Diari d'Eivissa</a> | <a target="_blank" href="http://www.diariodemallorca.es/">Diari de Mallorca</a> | <a target="_blank" href="http://www.emporda.info/">Empordà</a> | <a target="_blank" href="http://www.farodevigo.es/">Faro de Vigo</a> | <a target="_blank" href="http://www.diarioinformacion.com">Informació</a> | <a target="_blank" href="http://www.laopinioncoruna.es/">L'Opinió la Corunya</a> | <a target="_blank" href="http://www.laopiniondemalaga.es/"> L'Opinió de Màlaga </a> | <a target="_blank" href="http://www.laopiniondemurcia.es/">L'Opinió de Múrcia</a> | <a target="_blank" href="http://www.laopinion.es/">L'Opinió de Tenerife</a> | <a target="_blank" href="http://www.laopiniondezamora.es/">L'Opinió de Zamora</a> | <a target="_blank" href="http://www.laprovincia.es/">La Província</a> | <a href="http://www.lne.es/" class="enlace_pie" target="_blank"> La Nova Espanya </a> | <a target="_blank" href="http://www.levante-emv.com/">Levante-EMV</a> | <a target="_blank" href="http://www.mallorcazeitung.es/">Mallorca Zeitung</a> | <a target="_blank" href="http://www.regio7.cat/">Regió 7</a> | <a target="_blank" href="http://www.superdeporte.es/">Superdeporte</a> | <a target="_blank" href="http://www.adelaidereview.com.au/">The Adelaide Review</a> | <a target="_blank" href="http://www.la977.com/">97.7 La Ràdio</a> | <a href="http://www.euroresidentes.com" target="_blank" rel="nofollow">Euroresidentes</a> | <a href="http://www.laloterianavidad.com" title="Loteria Navidad" target="_blank">Loteria Nadal</a> | <a title="Premios Cine" href="http://www.premios-cine.com/" target="_blank">Premis Cinema</a>
+<!-- cierre de elemento a&ntilde;adido al responsive -->
+</div>
+</div>
+<!-- **** -->
+</div>
+<div class="patrocinadores">
+<div class="OJD"></div>
+<div class="CPM"></div>
+</div>
+</div>
+<div class="bloqueclear"></div>
+</div>
+</div>
+</div>
+<div class="cierre_pie_pagina">
+<div class="nodesborda">
+<div class="copyright">
+	<address>© Editorial Premsa Valenciana, S.A. Tots els drets reservats.</address>
+</div>
+
+<div class="avisos_legales">
+	<a href="../legal/aviso-legal.html" title="Aviso Legal" target="_blank">Avís Legal</a>
+    <span class="separador"> | </span>
+    <a href="../legal/politica-privacidad.html" title="Política de Privacidad" target="_blank">Política de Privadesa</a>
+    <span class="separador"> | </span>
+    <a href="../legal/politica-cookies2.html" title="Política de Cookies" target="_blank">Política de Cookies</a>
+</div>
+
+<script type="text/javascript" src="http://www.levante-emv.com/elementosWeb/js/ads.js"></script><script type="text/javascript">if(document.getElementById("ads_control")!= undefined){document.write("<script>_gaq.push(['_trackEvent','Adblock','Unblocked','false',,true]);</sc"+"ript>");}else{document.write("<script>_gaq.push(['_trackEvent','Adblock','Blocked','true',,true]);</sc"+"ript>");}</script>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+.contenedorPalmares h2{
+	margin:4px 0px;
+	padding:5px 10px;
+	color:#000000;
+	border-left:6px solid #dd146d;
+	border-bottom:1px solid #eeeeee;
+	border-top:1px solid #eeeeee;
+}
+
+.contenedorPalmares h2.epigrafe1Col{
+	border-bottom: 1px solid #EEEEEE !important;
+    padding-left: 10px !important;
+    padding-top: 5px;
+}
+
+.contenedorPalmares{
+	width:650px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+table.giroItalia2013 {
+    width: 620px;
+}
+table.giroItalia2013 thead td, table.giroItalia2013 em {
+    color: #de4019;
+}
+table.giroItalia2013 thead td, table.giroItalia2013 tbody td {
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 12px;
+    padding: 9px 11px;
+}
+table.giroItalia2013 tbody td.bordeIZQ {
+    border-left: 1px solid #EEEEEE;
+}
+table.giroItalia2013 tbody td.bordeDCH {
+    border-right: 1px solid #EEEEEE;
+}
+table.giroItalia2013 em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.reclamoGiroItalia {
+	border:1px solid #eeeeee;
+	border-top:none;
+    width: 318px;
+	font-size:13px;
+	padding-bottom:10px;
+}
+
+.reclamoGiroItalia h2{
+	margin:4px 0px;
+	padding:5px 10px !important;
+	border-left:6px solid #dd146d;
+	border-bottom:1px solid #eeeeee !important;
+	border-top:1px solid #eeeeee;
+}
+
+.reclamoGiroItalia h2 a{
+	color:#666666;
+	text-decoration:none;
+}
+
+.reclamoGiroItalia .cajaContenido {
+    font-family: arial;
+    padding: 12px;
+    width: 294px;
+}
+
+.reclamoGiroItalia .cajaContenido img {
+    border: medium none;
+    float: left;
+    margin-right: 10px;
+	position:inherit;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	border: 2px solid #FFFFFF;
+	width: 100px;
+	height:70px;
+}
+.reclamoGiroItalia .cajaContenido a{
+	text-decoration:none;
+	color:#dd146d;
+	font-weight:bold;
+}
+
+.saltoGiro{
+	clear:both;
+}

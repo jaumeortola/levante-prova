@@ -1,0 +1,24 @@
+.cabecera .promo_pago {	
+	border-left: 1px solid #626262;
+	border-right: 1px solid #626262;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -11px;
+	width: 1000px;
+	display:none;
+	position:relative;
+}
+.cabecera .promo_pago .lazo{
+	position:absolute;
+	left:-4px;
+	top:-3px;
+	height:70px;
+	width:70px;
+	z-index:10000;
+	background-color:transparent;
+}
+.cabecera .promo_pago a{
+	border:none;
+	outline:0;
+}

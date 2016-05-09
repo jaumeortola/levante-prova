@@ -1,0 +1,18 @@
+/* Scroller Box */
+#scroller_container {
+ position: relative;
+ width: 300px;
+ height: 20px;
+ overflow: hidden;
+}
+
+#scroller {
+ white-space: nowrap;
+ line-height: 20px;
+ font-size: 12px;
+}
+
+#scroller p {
+ padding: 0;
+}
+/* Scoller Box */

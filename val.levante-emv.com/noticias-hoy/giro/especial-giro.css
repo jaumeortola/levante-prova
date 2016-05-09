@@ -1,0 +1,348 @@
+﻿/*body{background: url(../img/fondoMundial2014.jpg) center top no-repeat fixed #eee !important;}*/
+body p {color: #444;}
+body.frisos{background:none !important;}
+@font-face {
+	font-family: 'roboto_condensedbold'; src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.eot'); src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.woff') format('woff'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-bold-webfont.svg') format('svg');  font-weight: normal;  font-style: normal;
+}
+@font-face {
+	font-family: 'robotoregular'; src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.eot'); src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.woff') format('woff'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/Roboto-Regular-webfont.svg') format('svg'); font-weight: normal; font-style: normal;
+}
+@font-face {font-family: 'roboto_condensedregular'; src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.eot'); src: url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.woff') format('woff'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/noticias-hoy/giro/fuentes/robotocondensed-regular-webfont.svg') format('svg'); font-weight: normal; font-style: normal;
+}
+.contenedorFutbol{width: 990px;	margin:0px auto;padding: 0px;}
+#pagina.divEspecialesFondo{background-color: #fff; box-shadow: 0px 0px 5px #444; }
+/*.esp .menuSuperior {background-color: #fff; float: left; font-size: 13px; font-weight: bold; line-height: normal; padding-bottom: 5px; padding-top: 5px; width: 990px; border-top: 3px double #E5570D; border-bottom: 3px double #E5570D; margin-bottom: 5px; box-shadow: 0px 2px 3px #6e9077; margin-top: -2px;}
+.esp .menuSuperior a span {color: #292B34;}
+.esp .menuSuperior a:hover span {color: #E5570D;}
+.esp .menuSuperior .current a span { background-color: #E5570D; color: #FFFFFF;}*/
+
+.secundaria {border-bottom: 1px dotted #ccc;clear: both; height: auto; margin-bottom: 0; padding: 5px 0 30px; width: 650px;}
+.secciones.secundaria .imagensec img {margin-left: 10px; margin-right: 15px; vertical-align: middle; border: 1px solid #00AEEF}
+.secundaria .textosec .epigrafe {color: #D07B07; display: none; float: none; font-size: 11px; font-weight: normal; line-height: 15px; margin-top: 0px; text-decoration: none;}
+.secundaria .textosec .epigrafe a{text-decoration: none;}
+.secciones .textosec .autoria {display: block; font-size: 11px; margin-top: 3px;}
+.secciones .textosec .autoria a {color: #1E6023; font-weight: bold; text-decoration: none;}
+.secciones .textosec .texto p {color: #666666; font-size: 12px; overflow: hidden; margin-top: 3px; text-align: justify;}
+.esp .noticia1col .fecha {font: 12px roboto_condensedregular;}
+.esp .noticia1col h2 { margin: 5px 0px 2px; text-decoration: none; }
+.esp .noticia1col h2 a {color: #00AEEF; margin: 3px 0 0; text-decoration: none;font: 22px roboto_condensedregular;} /* --------------- este estilo puede que haya que quitarlo ---------------------*/
+.esp .noticia1col h2 a:hover{color: #912214;}
+.secciones .textosec h3 a {color: #1759a6; font-size: 17px; margin: 0; padding: 0; text-decoration: none;}/* ----------- este estilo puede que haya que quitarlo -----------------*/
+.depcolumnadcha h3.enlacesReclamosCabecerasTercera, .depcolumnadcha h3.enlacesReclamosCabecerasTercera a{font-size:17px;}
+.esp .noticia1col p {color: #666; text-align: justify; font: 12px robotoregular; }
+.secciones .textosec .texto .fecha {color: #1759A6;font-size: 12px;font-weight: normal; margin-right: 2px;}
+.bloque1columna h2{margin-top: 5px;}
+.bloque1columna h2, .bloque1columna h2 a {background:#efefef;color: #1759A6; display: block; font-size: 16px; margin: 0 0 0 0px; padding: 4px; border-bottom: 1px solid #1759A6; width: 643px; font-weight: bold;}
+
+.esp .noticia1col .epigrafePortada {color: #654b48; font: 12px roboto_condensedregular;margin: 0 0 0 0px; }
+
+p.texto { font-size: 12px; margin: 2px 5px;  padding: 0;}
+
+.esp .rutademigas {font: 12px roboto_condensedregular; margin: 3px 7px;}
+.esp .rutademigas h1 a, .esp .rutademigas h1 {display: inline; font-size: 12px; font-weight: bold; margin: 0; color: #00AEEF ;}
+.esp .noticia1col a .piedefoto {background-color: #1D3B5E; color: #eee; font: 12px roboto_condensedregular; height: auto; padding: 2px 0 2px 3px;}
+.esp .rutademigas .flecha {color: #00AEEF ; display: inline; font-weight: bold; margin: 0 8px;}
+
+
+a img{border: none;}
+.alineaDerecha{text-align: right !important;}
+.alineaIzquierda{text-align: left !important;}
+.alineaCentro{text-align: center !important;}
+.flotaIzquierda{ float: left !important;}
+.flotaDerecha{ float: right !important;}
+.margenArriba{ margin-top: 20px !important;}
+.margenDerecha{ margin-right: 5px !important;}
+.margenDerecha2{ margin-right: 10px !important;}
+.margenArribaMini{margin-top: 5px !important;}
+.margenIzquierda2{margin-left: 15px !important;}
+.miniPadding{padding: 0px 2px 2px; !important;}
+.limpiar{ clear: both;/* height: 1px; overflow: hidden;*/}
+.frisos{margin: 0px; background: none;}
+.meteFriso{width: 990px; overflow:hidden;}
+.paddingVertical{padding-top: 10px !important; padding-bottom: 10px !important;}
+.paddingHorizontal{padding-left: 10px !important;padding-right: 10px !important;}
+.borderAbajo{ border-bottom: 1px dotted #ccc;}
+.edadArriba{font: normal 12px Arial, Tahoma; padding-left: 5px;}
+.noBorde{border: none !important;}
+
+.tablaresultados table th h2 a {width: 240px !important;}
+
+
+.esp .columnaizdaglobal { margin: 10px 0 -10px;}
+.esp .columnadchaglobal { margin: 10px 0 -10px;}
+
+.esp .noticia2col .basic2col a img { width:650px; float:left; border:none; display:block}
+.esp .noticia2col .basic2col a:hover img {opacity: 0.7; -moz-opacity: 0.7; -webkit-opacity: 0.7; filter:alpha(opacity=70);}
+.esp .noticia2col .basic2col h2 { margin:0px; text-decoration:none; font-size:24px; margin-top:0px; padding-top:0px;}
+.esp .noticia2col .basic2col h2 a {color:#1759a6; text-decoration:none; margin:3px 0px 0px 0px;}
+.esp .noticia2col .basic2col h2 a:hover { color: #666;}
+.esp .noticia2col .basic2col .fecha { font-size:11px;}
+.esp .noticia2col .basic2col .autoria { font-size:11px; color:#1759a6;}
+.esp .noticia2col .basic2col .autoria a {color:#1759a6; font-weight:bold;}
+.esp .noticia2col .basic2col .autoria a:hover {color:#666; font-weight:bold;} 
+.esp .noticia2col .basic2col p { font-size:12px;}
+.esp .noticia2col .basic2col a .piedefoto {background-color: #1D3B5E; color: #eee; font: 12px roboto_condensedregular; height: auto; padding: 2px 0 2px 3px;}
+
+.esp .noticia2col .basic2col .piedefoto { background-color:#0F3; color:#0F3}
+
+.esp .noticia2col .basic2col .autoria a, .esp .noticia1col .autoria a {color: #912214; font-weight: normal; font: 12px roboto_condensedregular;}
+.esp .noticia2col .basic2col .autoria a:hover, .esp .noticia1col .autoria a:hover {font-weight: normal;}
+
+.esp .noticia1col .epigrafePortada a, .secundaria .textosec .epigrafe a {color: #912214; font-weight: normal; font: 12px roboto_condensedregular; line-height: 20px; text-transform: uppercase;}
+
+
+h4.cabecerasLugares{ color: #444 !important; padding-left: 15px !important; font-size: 14px;}
+ul.listaLugares li{font-size: 12px; line-height: 16px;  margin: 5px 5px;  padding: 0;  text-align: justify; color: #444;}
+
+
+h2.divisionSeccion{padding:2px 2px 2px 4px; background: #fcecd9 !important; color: #000;}
+h2.divisionSeccion02{padding:4px 2px 4px 6px; background: #3A4856 !important; color: #fff; text-transform: uppercase;}
+
+/*.cont_jugadores table tr:nth-child(2n+1) { background:#eee; !important}
+.cont_jugadores table tr:nth-child(2n) { background: #fff; !important}
+.cont_jugadores table th { background: #fff !important; color: #E5570D !important; width: 20%; border: 1px solid #E5570D; padding: 3px 0px;}
+.cont_jugadores a { color: #3a3a3a; font-weight: normal !important; text-decoration: none;}
+.cont_jugadores a:hover{color: #E5570D;}
+.cont_jugadores td {padding: 2px 0px 2px 4px; font:11px Arial;}
+.cont_jugadores table tr.sinFondo {background: none !important;}
+
+
+.cont_jugadores02 table.tablaEstadisticas02 tr:nth-child(2n+1) { background:#dfe5eb !important; border-bottom: 1px solid #fff;}
+.cont_jugadores02 table.tablaEstadisticas02 tr:nth-child(2n) { background: #dfe5eb !important; border-bottom: 1px solid #fff;}
+.cont_jugadores02 table.tablaEstadisticas02 th { background: #fff !important; color: #3A4856 !important; width: 20%; border: 1px solid #3A4856; padding: 3px 0px;}
+.cont_jugadores02 a { color: #3a3a3a; font-weight: normal !important; text-decoration: none;}
+.cont_jugadores02 a img{ border: 1px solid #3d4a53;}
+.cont_jugadores02 a:hover{color: #E5570D;}
+.cont_jugadores02 .tablaEstadisticas02 td {padding: 2px 0px 2px 4px; font:11px Arial;}
+.cont_jugadores02 table.tablaEstadisticas02 tr.sinFondo {background: none !important;}*/
+
+
+
+/* ################################################ Submenus ##################################################### */
+
+.esp .submenu { background-color: #fff; float: left; font-size: 13px; font-weight: normal; padding-bottom: 5px; padding-top: 5px; width: 990px; margin-bottom: 5px; border-bottom: 1px dotted #ccc;}
+.esp .submenu h3 a, .esp .submenu h2 a { color: #006433; text-transform: uppercase;}
+
+
+
+
+
+.simple{font-weight: normal;}
+
+.dosLineas{margin-top: 0px !important;}
+.margenIzquierda{margin-left: 5px !important;}
+
+
+
+
+/* ****************************************** cabecera seccion ********************************************** */
+/*.cabeceraUniversidades{width: 985px;}
+.cabeceraUniversidades .menuEurobasket2015{list-style-type: none; margin: 0px; padding: 0px; border-top: 1px solid #bec0c2; border-bottom: 1px solid #bec0c2;}
+.cabeceraUniversidades .menuEurobasket2015 li{display: inline-block; font: 15px roboto_condensedregular; padding: 5px 34px;}
+.cabeceraUniversidades .menuEurobasket2015 li a{text-decoration: none; color: #0f4482;}
+.cabeceraUniversidades .menuEurobasket2015 li a:hover{color: #04a4ee;}
+.cabeceraUniversidades .menuEurobasket2015 li.seleccionada{background: #004B88;}
+.cabeceraUniversidades .menuEurobasket2015 li.seleccionada a{color: #fff;}*/
+
+/* ****************************************** cabecera seccion para menu especiales ********************************************** */
+
+/*.esp .menuSuperior {border-top: 1px solid #bec0c2; border-bottom: 1px solid #bec0c2; box-shadow: none; float: left; font-size: 13px; font-weight: bold; line-height: normal; margin-bottom: 5px; margin-top: 0px; padding-bottom: 0px; padding-top: 0px; width: 990px; background-color: #fff;}
+.esp .menuSuperior ul{list-style-type: none; margin: 0px; padding: 0px; }
+.esp .menuSuperior ul li{display: inline-block; padding: 5px 7px 5px 7px;}
+.esp .menuSuperior ul li h3, .esp .menuSuperior ul li h2{margin: 0px;}
+.esp .menuSuperior ul li a{text-decoration: none; color: #3b5f02; border-right: none;}
+.esp .menuSuperior ul li a span{color: #00AEEF ;}
+.esp .menuSuperior ul li h3 a span, .esp .menuSuperior ul li h2 a span{font: 18px roboto_condensedregular !important; background: none !important;}
+.esp .menuSuperior ul li a:hover, .esp .menuSuperior ul li a span:hover{color: #8d706c;}
+.esp .menuSuperior ul li.current{background: #00AEEF  !important;}
+.esp .menuSuperior ul li.current a span{color: #fff;}
+.esp .menuSuperior ul li.current a span:hover{color: #ecd8d6 !important;}
+.esp .menuSuperior ul li.current a{color: #fff;}*/
+
+
+.esp .menuSuperior {border-top: 1px solid #bec0c2; border-bottom: 1px solid #bec0c2; box-shadow: none; float: left; font-size: 13px; font-weight: bold; line-height: normal; margin-bottom: 5px; margin-top: 0px; padding-bottom: 0px !important; padding-top: 0px; width: 990px; background-color: #fff;}
+.esp .menuSuperior ul{list-style-type: none; margin: 0px 0px 0px 0px !important; padding: 0px 0px 0px 0px !important; }
+.esp .menuSuperior ul li{display: inline-block; margin: 0px !important; padding: 5px 7px 5px 7px;}
+.esp .menuSuperior ul li h3, .esp .menuSuperior ul li h2{margin: 0px;}
+.esp .menuSuperior ul li a{text-decoration: none; border-right: none; color: #00AEEF ; float: none;}
+.esp .menuSuperior ul li h3 a, .esp .menuSuperior ul li h2 a{/*font: 15px roboto_condensedregular !important; background: none !important; display: block; padding: 5px 10px;*/}
+.esp .menuSuperior ul li h3 a span, .esp .menuSuperior ul li h2 a span{font: 18px roboto_condensedregular !important; background: none !important;}
+.esp .menuSuperior ul li a:hover, .esp .menuSuperior ul li a:hover span{color: #8d706c;}
+.esp .menuSuperior ul li.current{background: #00AEEF  !important;}
+.esp .menuSuperior ul li.current a{color: #fff;}
+.esp .menuSuperior ul li.current a:hover, .esp .menuSuperior ul li.current a:hover span{color: #dacfcd !important;}
+
+
+
+.columna{width: 318px; margin: 0px 4px 0px 0px; float: left;}
+
+
+
+/* ##################################################### palmares ########################################################################### */
+
+
+
+/* ################################################# blogs ############################################################## */
+.cajaBlogs{width: 314px; margin: 0px auto; border: 1px solid #ccc;}
+.contentReclamos a.imagenCajaReclamo  {height: 80px; width: 110px; overflow:hidden; border: 1px solid #006433; display: block;float: left;  margin: 4px 10px 4px 4px;}
+.contentReclamos a img{width: 110px;}
+.cajaBlogs h4, .cajaBlogs h4 a{  color: #1759A6 !important; font-size: 15px !important; font-weight: bold !important; margin: 5px 0px 3px; padding: 5px 0 0; text-decoration: none;}
+.cajaBlogs .contentReclamos a {color: #000000; font: normal 12px/13px Arial,Tahoma; text-decoration: none; }
+.cajaBlogs .contentReclamos p{color: #444; font: normal 12px/13px Arial,Tahoma; margin-top:12px;}
+
+
+
+
+
+
+/* ***********************************  version dos, listado ********************************** */
+
+.secciones .textosec h3 {margin: 0; padding: 0;font: normal 19px/18px roboto_condensedregular, Arial,Tahoma;}
+.secciones .textosec .texto .fecha {font: 12px roboto_condensedregular; color: #000; margin-right: 5px;}
+.secciones .textosec h3 a {color: #00AEEF ; font: 22px roboto_condensedregular; margin: 3px 0 0; text-decoration: none;}
+.secciones .textosec h3 a:hover {color: #912214;}
+.secciones .textosec .texto p {color: #666; font: 12px robotoregular; text-align: justify;}
+.secciones .textosec .autoria a {color: #912214; font: 12px roboto_condensedregular; text-decoration: none;}
+
+.bloque1columna h2, .bloque1columna h2 a {background: #efefef; border-bottom: 1px solid #00AEEF ; color: #1D3B5E; font: 24px roboto_condensedregular;}
+.mas-not-list h3 a {color: #1D3B5E; font: 18px roboto_condensedregular !important; padding: 0px 0 4px 24px; background: url("../../elementosWeb/mediaweb/images/iconos/ico_ir.gif") no-repeat scroll 0px 4px; text-decoration: none;}
+
+
+/* ********************** slider del especial ************************************************ */
+.esp .noticia2col .ppal2col li{text-align: center;}
+.esp .noticia2col .ppal2col a span {height: 44px;}
+.esp .noticia2col .ppal2col .current a span {background: transparent; color: #00AEEF ; font: normal 15px/16px roboto_condensedregular; border-right: 1px solid #912214; border-left: 1px solid #912214; border-top: 1px solid #912214; padding-top: 8px; padding-bottom: 8px;}
+.esp .noticia2col .ppal2col .current a span:hover {color: #912214;}
+.esp .noticia2col .ppal2col .noActive a span {background: #e4dfdb; font: normal 15px/16px roboto_condensedregular; border-bottom: 1px solid #912214; border-right: 1px solid #adb0a7; color: #655348; padding-top: 8px; padding-bottom: 8px;}
+.esp .noticia2col .ppal2col .noActive a span:hover {color: #908177;}
+.esp .noticia2col .ppal2col a span {width: 193px;}
+.esp .noticia2col .cajas .parrafo {width: 99.5%; border-right: 1px solid #912214; border-left: 1px solid #912214; border-bottom: 1px solid #912214; box-sizing: border-box; background: #fff; padding: 10px 10px 15px;}
+.esp .noticia2col .cajas .parrafo p{font: normal 12px/17px robotoregular;}
+.esp .noticia2col .cajas .parrafo p a{text-decoration: none; color: #00AEEF ;}
+.esp .noticia2col .cajas .parrafo p a span{color: #00AEEF ; font: normal 12px/17px roboto_condensedregular; border-bottom: 1px dotted #5a6548; padding-bottom:0px;display: inline-block; float: right; margin-top: 5px;}
+
+/* ********************************** desarrollo de noticia *************************** */
+
+.esp .noticia_desarrollada h1 {color: #00AEEF ; font: normal 34px/34px roboto_condensedregular; margin-bottom: 5px;}
+.esp .noticia_desarrollada .subtitulo h2{color: #3983BF; font: normal 22px/26px roboto_condensedregular; margin-top: 10px;}
+.esp .noticia_desarrollada .noticia_texto p {color: #666; font: 13px robotoregular; text-align: justify;}
+.esp .noticia_desarrollada .piedefoto {background-color: #1D3B5E; color: #eee; font: 12px roboto_condensedregular; height: auto; padding: 2px 0 2px 3px;}
+.esp .noticia_desarrollada .epigrafe a {color: #912214; font: 12px/20px roboto_condensedregular; text-transform: uppercase;}
+.esp .letra_pequenya {color: #000; font: 12px roboto_condensedregular; margin-right: 5px; margin-left: 10px;}
+
+/* *************** 3ª Columna ************************** */
+
+.esp .noticia1col_linea h4 a {color: #00AEEF ; font: normal 13px/17px roboto_condensedregular; padding-right: 3px;}
+.esp .divEspecialesModulo .noticia1col_linea .fecha {display: none;}
+.esp .divEspecialesModulo .noticia1col_linea a img {margin-right: 8px;}
+
+
+/*noticia dos culumnas ******************************** */
+
+.esp .noticia2col .basic2col h2 a:hover {color: #912214;}
+
+.esp .noticia2col .basic2col h2 a {color: #00AEEF ; font: 30px/36px roboto_condensedregular; margin: 3px 0 0;text-decoration: none;}
+
+.esp .noticia2col .basic2col p {color: #666;font: 12px robotoregular; text-align: justify;}
+
+/* ************************** cajas ************************************* */
+div.epigrafeRenta h2{padding: 3px 0 6px !important;}
+div.epigrafeRenta h2 a {color: #1759a6;text-decoration: none; text-shadow: 0 0 2px #fff;font: normal 16px/17px roboto_condensedregular;}
+div.datosRenta div.fecha p, div.moduloConsultorio div.fecha p {font: 12px robotoregular,Tahoma,Arial !important; margin: 0 0 0 10px; padding: 0;}
+div.datosRenta div.fecha p a, div.moduloConsultorio div.fecha p a {border-bottom: 1px dotted #3a3a3a; color: #3a3a3a; display: inline-block; font: bold 13px robotoregular, Tahoma,Arial !important; margin-top: 4px; text-decoration: none;}
+div.datosRenta div.fecha ul li, div.moduloConsultorio div.fecha ul li {font: 12px robotoregular,Tahoma,Arial !important;}
+div.datosRenta div.fecha h3, div.moduloConsultorio div.fecha h3 {font: normal 13px/17px roboto_condensedregular; background: rgba(0, 0, 0, 0) url("http://www.levante-emv.com/noticias-hoy/img/soloCheck.png") no-repeat scroll left top; color: #000; font-size: 14px; margin: 0 0 7px; padding: 3px 0 2px 28px;}
+div.creaPadding {padding-bottom: 3px !important;}
+
+.contenedorPalmares h2{
+	margin:4px 0px;
+	padding:5px 10px;
+	color:#000000;
+	border-left:6px solid #00AEEF;
+	border-bottom:1px solid #eeeeee;
+	border-top:1px solid #eeeeee;
+}
+
+.contenedorPalmares h2.epigrafe1Col{
+	border-bottom: 1px solid #EEEEEE !important;
+    padding-left: 10px !important;
+    padding-top: 5px;
+}
+
+.contenedorPalmares{
+	width:650px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+table.giroItalia2013 {
+    width: 620px;
+}
+table.giroItalia2013 thead td, table.giroItalia2013 em {
+    color: #de4019;
+}
+table.giroItalia2013 thead td, table.giroItalia2013 tbody td {
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 12px;
+    padding: 9px 11px;
+}
+table.giroItalia2013 tbody td.bordeIZQ {
+    border-left: 1px solid #EEEEEE;
+}
+table.giroItalia2013 tbody td.bordeDCH {
+    border-right: 1px solid #EEEEEE;
+}
+table.giroItalia2013 em {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.reclamoGiroItalia {
+	border:1px solid #eeeeee;
+	border-top:none;
+    width: 318px;
+	font-size:13px;
+	padding-bottom:10px;
+}
+
+.reclamoGiroItalia h2{
+	margin:4px 0px;
+	padding:5px 10px !important;
+	border-left:6px solid #00AEEF;
+	border-bottom:1px solid #eeeeee !important;
+	border-top:1px solid #eeeeee;
+}
+
+.reclamoGiroItalia h2 a{
+	color:#666666;
+	text-decoration:none;
+}
+
+.reclamoGiroItalia .cajaContenido {
+    font-family: arial;
+    padding: 12px;
+    width: 294px;
+}
+
+.reclamoGiroItalia .cajaContenido img {
+    border: medium none;
+    float: left;
+    margin-right: 10px;
+	position:inherit;
+	-webkit-box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	-moz-box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	box-shadow: 0px 0px 5px 1px rgba(214,214,214,1);
+	border: 2px solid #FFFFFF;
+	width: 100px;
+	height:70px;
+}
+.reclamoGiroItalia .cajaContenido a{
+	text-decoration:none;
+	color:#00AEEF;
+	font-weight:bold;
+}
+
+.saltoGiro{
+	clear:both;
+
+
+

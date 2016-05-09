@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head><base href="http://www.riuraueditors.cat/levante/val.levante-emv.com/">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Capçalera interior iframe - Levante-EMV</title>
+<link href="../elementosWeb/css/minicabeceras.css" rel="stylesheet" type="text/css">
+<script src="../elementosWeb/js/servicios.js"></script>
+<style>
+body{margin:0;}
+</style>
+
+<script>
+function getURLParam(strParamName){
+  var strReturn = "";
+  var strHref = window.location.href;
+  if ( strHref.indexOf("?") > -1 ){
+    var strQueryString = strHref.substr(strHref.indexOf("?"));
+    var aQueryString = strQueryString.split("&");
+    for ( var iParam = 0; iParam < aQueryString.length; iParam++ ){
+      if (
+aQueryString[iParam].indexOf(strParamName + "=") > -1 ){
+        var aParam = aQueryString[iParam].split("=");
+        strReturn = aParam[1];
+        break;
+      }
+    }
+  }
+  return unescape(strReturn);
+}
+
+String.prototype.replaceLatinChar = function(){
+ return output = this.replace(/&agrave;|&egrave;|&igrave;|&ograve;|&ugrave;|&aacute;|&eacute;|&iacute;|&oacute;|&uacute;|&ntilde;|&auml;|&euml;|&iuml;|&ouml;|&uuml;/ig,function (str,offset,s) {
+        var str =str=="&aacute;"?"a":str=="&eacute;"?"e":str=="&iacute;"?"i":str=="&oacute;"?"o":str=="&uacute;"?"u":str=="&ntilde;"?"n":str;
+			str =str=="&agrave;"?"a":str=="&egrave;"?"e":str=="&igrave;"?"i":str=="&ograve;"?"o":str=="&ugrave;"?"u":str=="&ntilde;"?"n":str;
+		   str =str=="&Aacute;"?"A":str=="&Eacute;"?"E":str=="&Iacute;"?"I":str=="&Oacute;"?"O":str=="&Uacute;"?"U":str=="&Ntilde;"?"N":str;
+		   str =str=="&Agrave;"?"A":str=="&Egrave;"?"E":str=="&Igrave;"?"I":str=="&Ograve;"?"O":str=="&Ugrave;"?"U":str=="&Ntilde;"?"N":str;
+		   str =str=="&auml;"?"a":str=="&euml;"?"e":str=="&iuml;"?"i":str=="&ouml;"?"o":str=="&uuml;"?"u":str;
+		   str =str=="&Auml;"?"A":str=="&Euml;"?"E":str=="&Iuml;"?"I":str=="&Ouml;"?"O":str=="&Uuml;"?"U":str;
+        return (str);
+        })
+
+}
+
+var pMenu = getURLParam('pMenu');
+var pSubMenu = getURLParam('pSubMenu');
+var pMostrarSubMenu = getURLParam('pMostrarSubMenu');
+var pTexto1 = getURLParam('pTexto1');
+var pTexto2 = getURLParam('pTexto2');
+var pOcultarCabecera = getURLParam('pOcultarCabecera');
+function iniciarParams(){
+	$("#menu li").each(function (i) {
+        if ($("a",$(this)).html().toLowerCase().replaceLatinChar() == pMenu.toLowerCase().replaceLatinChar()) {
+         $(this).addClass("select")
+					}
+				});
+   if(pTexto1!=null && pTexto1!="" || pTexto2!=null && pTexto2!="")
+   {
+   	if(pTexto1!=null && pTexto1!="")
+			$("#texto1").html(pTexto1);
+		else
+			$("#texto1").html("&nbsp;");
+		if(pTexto2!=null && pTexto2!="")
+			$("#texto2").html(pTexto2);
+		else
+			$("#texto2").html("&nbsp;");
+		$("#textos").show();
+   }
+   if(pOcultarCabecera!=null && pOcultarCabecera=="si")
+   {
+   	$("#logoCabecera").hide();
+   	$("#contenedorP").attr("style","top:-20px;");
+   	$("#home").attr("class","first");
+   	$("#primera").attr("class","");
+
+   	var compruebaCookie = $("#MensajeCompruebaCookieSite:first-child");
+   	if(compruebaCookie!=null)
+   	{
+   		var contenido = compruebaCookie.html();
+			contenido = contenido.replace("<br>","");
+			contenido = contenido.replace("font-size: 14px;","font-size: 10px;");
+			contenido = contenido.replace("font-size: 14px;","font-size: 10px;");
+			contenido = contenido.replace("width=\"21\"","width=\"11\"");
+			contenido = contenido.replace("height=\"17\"","height=\"9\"");
+			compruebaCookie.html(contenido)
+   	}
+   }
+}
+
+</script>
+</head>
+<body>
+<div class="miniCabecera" id="contenedorP">
+<div class="miniCabeceranav">
+<a id="logoCabecera" target="_top" href="../index.html" title="Levante-EMV" alt="Levante-EMV"><img border="0" src="../elementosWeb/mediaweb/images1010/cabecera/minicabecera.jpg" alt="Levante-EMV"></a>
+<div id="textos" class="chatCabecera" style="display:none">
+	<span id="texto1"></span>
+	<span id="texto2" class="tituloChat"></span>
+</div>
+<div class="menuMiniPremium">
+<ul id="menu">
+<li class="oculta" id="home">
+<a class="home" target="_top" href="../index.html"> </a>
+</li>
+<li class="first" id="primera">
+<a title="C.Valenciana" href="../comunitat-valenciana/index.html" target="_top">C.Valenciana</a>
+</li>
+<li>
+<a title="Más noticias" href="../espana/index.html" target="_top">Més notícies</a>
+</li>
+<li>
+<a title="Deportes" href="../deportes/index.html" target="_top">Esports</a>
+</li>
+<li>
+<a title="Economía" href="../economia/index.html" target="_top">Economia</a>
+</li>
+<li>
+<a title="Opinión" href="../opinion/index.html" target="_top">Opinió</a>
+</li>
+<li>
+<a title="Cultura" href="../cultura/index.html" target="_top">Cultura</a>
+</li>
+<li>
+<a title="Ocio" href="http://ocio.levante-emv.com/" target="_top">Oci</a>
+</li>
+<li>
+<a title="Vida y Estilo" href="../vida-y-estilo/index.html" target="_top">Vida i Estil</a>
+</li>
+<li>
+<a title="Participación" href="../participacion/index.html" target="_top">Participació</a>
+</li>
+<li class="last">
+<a title="Multimedia" href="../multimedia/index.html" target="_top">Multimèdia</a>
+</li>
+<li id="premiumHome" class="premiumHome">
+<a class="texto" href="../suscriptor/index.html" title="Suscriptor" target="_top">Subscriptor</a>
+</li>
+</ul>
+</div>
+<div class="cerrar"></div>
+</div>
+</div>
+<script>iniciarParams();</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/*body{background: url(../img/fondoMundial2014.jpg) center top no-repeat fixed #eee !important;}*/
+body p {color: #444;}
+body.frisos{background:none !important;}
+@font-face {
+	font-family: 'roboto_condensedbold'; src: url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.eot'); src: url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.woff') format('woff'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-bold-webfont.svg') format('svg');  font-weight: normal;  font-style: normal;
+}
+@font-face {
+	font-family: 'robotoregular'; src: url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.eot'); src: url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.woff') format('woff'), url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/elementosWeb/fonts/Roboto-Regular-webfont.svg') format('svg'); font-weight: normal; font-style: normal;
+}
+@font-face {font-family: 'roboto_condensedregular'; src: url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.eot'); src: url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.eot?') format('embedded-opentype'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.woff2') format('woff2'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.woff') format('woff'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.ttf') format('truetype'), url('http://www.levante-emv.com/elementosWeb/fonts/robotocondensed-regular-webfont.svg') format('svg'); font-weight: normal; font-style: normal;
+}
+.contenedorFutbol{width: 990px;	margin:0px auto;padding: 0px;}
+#pagina.divEspecialesFondo{background-color: #fff; box-shadow: 0px 0px 5px #444; }
+
+
+.esp .noticia1col p {font-size: 12px; color: #666; text-align: justify;}
+.secciones .textosec .texto .fecha {color: #1759A6;font-size: 12px;font-weight: normal; margin-right: 2px;}
+.bloque1columna h2{margin-top: 5px;}
+.bloque1columna h2, .bloque1columna h2 a {background:#efefef;color: #1759A6; display: block; font-size: 16px; margin: 0 0 0 0px; padding: 4px; border-bottom: 1px solid #1759A6; width: 643px; font-weight: bold;}*/
+
+p.texto { font-size: 12px; margin: 2px 5px;  padding: 0;}
+
+
+a img{border: none;}
+.alineaDerecha{text-align: right !important;}
+.alineaIzquierda{text-align: left !important;}
+.alineaCentro{text-align: center !important;}
+.flotaIzquierda{ float: left !important;}
+.flotaDerecha{ float: right !important;}
+.margenArriba{ margin-top: 20px !important;}
+.margenDerecha{ margin-right: 5px !important;}
+.margenDerecha2{ margin-right: 10px !important;}
+.margenArribaMini{margin-top: 5px !important;}
+.margenIzquierda2{margin-left: 15px !important;}
+.miniPadding{padding: 0px 2px 2px; !important;}
+.limpiar{ clear: both;/* height: 1px; overflow: hidden;*/}
+.frisos{margin: 0px; background: none;}
+.meteFriso{width: 990px; overflow:hidden;}
+.paddingVertical{padding-top: 10px !important; padding-bottom: 10px !important;}
+.paddingHorizontal{padding-left: 10px !important;padding-right: 10px !important;}
+.borderAbajo{ border-bottom: 1px dotted #ccc;}
+.edadArriba{font: normal 12px Arial, Tahoma; padding-left: 5px;}
+.noBorde{border: none !important;}
+
+.enlacesReclamosCabecerasTercera{background: url(http://www.levante-emv.com/noticias-hoy/mascotas/img/minicabacera3columna.jpg) left bottom no-repeat; padding: 3px 8px 2px 10px;/* border-bottom: 2px solid #c2e4f6;*/}
+.enlacesReclamosCabecerasTercera a{text-decoration: none; color: #3a4856;}
+h3.enlacesReclamosCabecerasTercera{ margin: 6px 0px 0px; font-size: 17px; font: 16px roboto_condensedregular;}
+
+.portadaGalerias{width: 650px;}
+
+
+/*.cont_jugadores table tr:nth-child(2n+1) { background:#eee; !important}
+.cont_jugadores table tr:nth-child(2n) { background: #fff; !important}
+.cont_jugadores table th { background: #fff !important; color: #E5570D !important; width: 20%; border: 1px solid #E5570D; padding: 3px 0px;}
+.cont_jugadores a { color: #3a3a3a; font-weight: normal !important; text-decoration: none;}
+.cont_jugadores a:hover{color: #E5570D;}
+.cont_jugadores td {padding: 2px 0px 2px 4px; font:11px Arial;}
+.cont_jugadores table tr.sinFondo {background: none !important;}
+
+
+.cont_jugadores02 table.tablaEstadisticas02 tr:nth-child(2n+1) { background:#dfe5eb !important; border-bottom: 1px solid #fff;}
+.cont_jugadores02 table.tablaEstadisticas02 tr:nth-child(2n) { background: #dfe5eb !important; border-bottom: 1px solid #fff;}
+.cont_jugadores02 table.tablaEstadisticas02 th { background: #fff !important; color: #3A4856 !important; width: 20%; border: 1px solid #3A4856; padding: 3px 0px;}
+.cont_jugadores02 a { color: #3a3a3a; font-weight: normal !important; text-decoration: none;}
+.cont_jugadores02 a img{ border: 1px solid #3d4a53;}
+.cont_jugadores02 a:hover{color: #E5570D;}
+.cont_jugadores02 .tablaEstadisticas02 td {padding: 2px 0px 2px 4px; font:11px Arial;}
+.cont_jugadores02 table.tablaEstadisticas02 tr.sinFondo {background: none !important;}*/
+
+
+
+
+/* ################################################ Submenus ##################################################### */
+
+/*.esp .submenu { background-color: #fff; float: left; font-size: 13px; font-weight: normal; padding-bottom: 5px; padding-top: 5px; width: 990px; margin-bottom: 5px; border-bottom: 1px dotted #ccc;}
+.esp .submenu h3 a, .esp .submenu h2 a { color: #006433; text-transform: uppercase;}*/
+
+.destacado-completo2 h2{background: none !important; font-size: 21px; color: #000; border-bottom: 2px solid #89a288; margin-bottom: 3px; font-weight: normal; padding: 0px;}
+.bloque1columna .destacado-completo .destacado-foto .contenido-foto p{color: #fff !important;}
+
+
+/* ****************************************** cabecera seccion ********************************************** */
+.cabeceraMascotas{width: 985px;}
+.cabeceraMascotas .menuMascotas{list-style-type: none; margin: 0px; padding: 0px; border-top: 1px solid #bec0c2; border-bottom: 1px solid #bec0c2;}
+.cabeceraMascotas .menuMascotas li{display: inline-block; font: 18px roboto_condensedregular; padding: 5px 34px;}
+.cabeceraMascotas .menuMascotas li a{text-decoration: none; color: #346667; font: 18px roboto_condensedregular;}
+.cabeceraMascotas .menuMascotas li a:hover{color: #57a3a5;}
+.cabeceraMascotas .menuMascotas li.seleccionada{background: #346667;}
+.cabeceraMascotas .menuMascotas li.seleccionada a{color: #fff;}
+
+/* ****************************************** cabecera seccion para menu especiales ********************************************** */
+
+.esp .menuSuperior {border-top: 1px solid #bec0c2; border-bottom: 1px solid #bec0c2; box-shadow: none; float: left; font-size: 13px; font-weight: bold; line-height: normal; margin-bottom: 5px; margin-top: 0px; padding-bottom: 0px; padding-top: 0px; width: 990px; background-color: #fff;}
+.esp .menuSuperior ul{list-style-type: none; margin: 0px; padding: 0px; }
+.esp .menuSuperior ul li{display: inline-block; padding: 5px 15px;}
+.esp .menuSuperior ul li h3, .esp .menuSuperior ul li h2{margin: 0px;}
+.esp .menuSuperior ul li a{text-decoration: none; color: #0f4482; border-right: none;}
+.esp .menuSuperior ul li h3 a span, .esp .menuSuperior ul li h2 a span{font: 18px roboto_condensedregular !important;}
+.esp .menuSuperior ul li a:hover, .esp .menuSuperior ul li a span:hover{color: #04a4ee;}
+.esp .menuSuperior ul li.current/*, .esp .menuSuperior ul li.current a span*/{background: #004B88 !important;}
+.esp .menuSuperior ul li.current a span{background: #004B88 !important;}
+.esp .menuSuperior ul li.current a{color: #fff;}
+
+/* ************************************* directorios ******************************************* */
+
+.contenedorMascotas .titularseccionMascotas{font: normal 30px roboto_condensedbold; color: #346667; background: none !important; margin-bottom: 10px;}
+
+.seccionMascotas{border-bottom: 1px dotted #ccc; margin-bottom: 8px; margin-top: 5px; overflow: hidden; padding-bottom: 8px; clear: both;}
+.seccionMascotas h3{margin: 0px 0px 0px 0px;}
+.seccionMascotas h3 a{font: normal 20px roboto_condensedbold; color: #346667 !important; margin: 0px 0px 0px 0px;}
+.seccionMascotas .imagenDirectorio {background-color: #fff; float: left; height: 120px; line-height: 0px; text-align: center; width: 160px; overflow: hidden; display: table-cell; margin-top: 5px}
+.seccionMascotas .imagenDirectorio a{display: block; vertical-align: middle;}
+.seccionMascotas .imagenDirectorio img {max-height: 120px; max-width: 160px;}
+.seccionMascotas .textoDirectorio {float: right; max-height: none; padding-left: 20px; width: auto; overflow: hidden; width: 470px; font: 14px roboto_condensedregular;}
+.seccionMascotas .textoDirectorio p{margin: 5px 0px;}
+.seccionMascotas .textoDirectorio dl{padding-left: 5px; margin: 5px 0px;}
+.seccionMascotas .textoDirectorio dt, .seccionMascotas .textoDirectorio dd{display: inline-block; font: 13px roboto_condensedregular;}
+.seccionMascotas .textoDirectorio dt{color: #346667; width: 65px;}
+.seccionMascotas .textoDirectorio dd{margin-left: 0px; color: #444;}
+.seccionMascotas .textoDirectorio dl a{color: #346667; border-bottom: 1px dotted #0f4482; text-decoration: none;}
+.seccionMascotas .textoDirectorio dl a:hover{ text-decoration: none !important;}
+
+
+
+
+
