@@ -1,2 +1,3 @@
-find . -type f|xargs sed -i 's/<head><base href="http://www.riuraueditors.cat/levante/val.levante-emv.com/">/<head><base href="http://www.riuraueditors.cat/levante/val.levante-emv.com/"><base href="http:\/\/www.riuraueditors.cat\/levante\/val.levante-emv.com\/">/g;'
-find . -type f|xargs sed -i 's/href="\//href="g;'
+#!/bin/bash
+#find ./val.levante-emv.com/ -type f|xargs sed -i 's/<head>/<head><base href="http:\/\/www.riuraueditors.cat\/levante\/val.levante-emv.com\/">/g;'
+find ./val.levante-emv.com/ -type f|xargs sed -i 's/href="\//href="/g;'
