@@ -1,6 +1,7 @@
 #!/bin/bash
 rm text-html/*
 find val.levante-emv.com/ -name \*.html -exec cp --backup=t {} text-html/ \;
+rm text-html/index.html*
 rm ~/github/languagetool-commandline-scripts/original/*
 cp text-html/* ~/github/languagetool-commandline-scripts/original/
 cd ~/github/languagetool-commandline-scripts/
