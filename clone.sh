@@ -6,7 +6,7 @@ wget \
      --page-requisites \
      --html-extension \
      --convert-links \
-     --level=2 \
+     --level=1 \
      --restrict-file-names=windows \
      --domains val.levante-emv.com \
      --no-parent \
